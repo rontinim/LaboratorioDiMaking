@@ -1,0 +1,3794 @@
+[
+  {
+    "id": "e0674b6f1cc308de",
+    "type": "tab",
+    "label": "Serra BASE_UI",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "tab_serra_dbmin",
+    "type": "tab",
+    "label": "DB_MIN (telemetry_last)",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "tab_sql_test",
+    "type": "tab",
+    "label": "SQL_TEST",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "f69a7e705c607f98",
+    "type": "tab",
+    "label": "DIAG SQLITE",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "tab_diag_sqlite_dbmin",
+    "type": "tab",
+    "label": "DIAG SQLITE",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "2833751dc3ba54bb",
+    "type": "tab",
+    "label": "SQLITE HARD TEST",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "tab_sqlite_hard_test_v2",
+    "type": "tab",
+    "label": "SQLITE HARD TEST v2",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "mqtt_broker_local",
+    "type": "mqtt-broker",
+    "name": "Local Mosquitto",
+    "broker": "127.0.0.1",
+    "port": "1883",
+    "clientid": "",
+    "usetls": false,
+    "protocolVersion": "4",
+    "keepalive": "60",
+    "cleansession": true,
+    "birthTopic": "",
+    "birthQos": "0",
+    "birthPayload": "",
+    "closeTopic": "",
+    "closeQos": "0",
+    "closePayload": "",
+    "willTopic": "",
+    "willQos": "0",
+    "willPayload": ""
+  },
+  {
+    "id": "sqlite_db_serra_final",
+    "type": "sqlitedb",
+    "db": "/opt/serra/serra.db",
+    "mode": "RWC"
+  },
+  {
+    "id": "283f57e4b0054b78",
+    "type": "ui_base",
+    "theme": {
+      "name": "theme-light",
+      "lightTheme": {
+        "default": "#0094CE",
+        "baseColor": "#0094CE",
+        "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+        "edited": true,
+        "reset": false
+      },
+      "darkTheme": {
+        "default": "#097479",
+        "baseColor": "#097479",
+        "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+        "edited": false
+      },
+      "customTheme": {
+        "name": "Untitled Theme 1",
+        "default": "#4B7930",
+        "baseColor": "#4B7930",
+        "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+      },
+      "themeState": {
+        "base-color": {
+          "default": "#0094CE",
+          "value": "#0094CE",
+          "edited": false
+        },
+        "page-titlebar-backgroundColor": {
+          "value": "#0094CE",
+          "edited": false
+        },
+        "page-backgroundColor": {
+          "value": "#fafafa",
+          "edited": false
+        },
+        "page-sidebar-backgroundColor": {
+          "value": "#ffffff",
+          "edited": false
+        },
+        "group-textColor": {
+          "value": "#1bbfff",
+          "edited": false
+        },
+        "group-borderColor": {
+          "value": "#ffffff",
+          "edited": false
+        },
+        "group-backgroundColor": {
+          "value": "#ffffff",
+          "edited": false
+        },
+        "widget-textColor": {
+          "value": "#111111",
+          "edited": false
+        },
+        "widget-backgroundColor": {
+          "value": "#0094ce",
+          "edited": false
+        },
+        "widget-borderColor": {
+          "value": "#ffffff",
+          "edited": false
+        },
+        "base-font": {
+          "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+        }
+      },
+      "angularTheme": {
+        "primary": "indigo",
+        "accents": "blue",
+        "warn": "red",
+        "background": "grey",
+        "palette": "light"
+      }
+    },
+    "site": {
+      "name": "Node-RED Dashboard",
+      "hideToolbar": "false",
+      "allowSwipe": "false",
+      "lockMenu": "false",
+      "allowTempTheme": "true",
+      "dateFormat": "DD/MM/YYYY",
+      "sizes": {
+        "sx": 48,
+        "sy": 48,
+        "gx": 6,
+        "gy": 6,
+        "cx": 6,
+        "cy": 6,
+        "px": 0,
+        "py": 0
+      }
+    }
+  },
+  {
+    "id": "5611bb81b0923213",
+    "type": "ui_tab",
+    "name": "Serra",
+    "icon": "dashboard",
+    "order": 1,
+    "disabled": false,
+    "hidden": false,
+    "width": 24
+  },
+  {
+    "id": "218b0ab2a806debc",
+    "type": "ui_tab",
+    "name": "DB_MIN (telemetry_last)",
+    "icon": "dashboard",
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "e165a2c0fa67eaf5",
+    "type": "sqlitedb",
+    "db": "/opt/serra/serra.db",
+    "mode": "RWC"
+  },
+  {
+    "id": "ui_grp_bed1",
+    "type": "ui_group",
+    "name": "Bed 1",
+    "tab": "5611bb81b0923213",
+    "order": 1,
+    "disp": true,
+    "width": "12",
+    "collapse": false
+  },
+  {
+    "id": "ui_grp_bed2",
+    "type": "ui_group",
+    "name": "Bed 2",
+    "tab": "5611bb81b0923213",
+    "order": 2,
+    "disp": true,
+    "width": "12",
+    "collapse": false
+  },
+  {
+    "id": "inj_dbmin_5s",
+    "type": "inject",
+    "z": "tab_serra_dbmin",
+    "name": "Poll DB (5s)",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "5",
+    "once": true,
+    "onceDelay": "1",
+    "topic": "poll",
+    "payload": "",
+    "payloadType": "date",
+    "x": 140,
+    "y": 120,
+    "wires": [
+      [
+        "fn_sql_dbmin_one"
+      ]
+    ]
+  },
+  {
+    "id": "fn_sql_bed1_dbmin",
+    "type": "function",
+    "z": "tab_serra_dbmin",
+    "name": "SQL bed1",
+    "func": "msg.payload = \"SELECT ts, zone, soil_cistern_pct, soil_cistern_ok, soil_pct, soil_temp_c, air_temp_c, air_rh, light_lux, vbat, rssi, weight_g, relay_led, relay_pump, soil1_pct, soil2_pct, motor_last_dir, motor_last_revs, nfc_uid, nfc_present, nfc_has_tag FROM telemetry_last WHERE zone IN (\\'bed1\\',\\'bed2\\') ORDER BY zone;\";\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 360,
+    "y": 80,
+    "wires": [
+      [
+        "sqlite_exec_dbmin",
+        "dbg_pre_sqlite_dbmin"
+      ]
+    ]
+  },
+  {
+    "id": "fn_sql_bed2_dbmin",
+    "type": "function",
+    "z": "tab_serra_dbmin",
+    "name": "SQL bed2",
+    "func": "msg.payload = \"SELECT ts, zone, soil_cistern_pct, soil_cistern_ok, soil_pct, soil_temp_c, air_temp_c, air_rh, light_lux, vbat, rssi, weight_g, relay_led, relay_pump, soil1_pct, soil2_pct, motor_last_dir, motor_last_revs, nfc_uid, nfc_present, nfc_has_tag FROM telemetry_last WHERE zone IN (\\'bed1\\',\\'bed2\\') ORDER BY zone;\";\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 360,
+    "y": 160,
+    "wires": [
+      [
+        "delay_bed2_dbmin_200ms",
+        "dbg_pre_sqlite_dbmin"
+      ]
+    ]
+  },
+  {
+    "id": "sqlite_exec_dbmin",
+    "type": "sqlite",
+    "z": "tab_serra_dbmin",
+    "mydb": "sqlite_db_serra_final",
+    "sqlquery": "fixed",
+    "sql": "SELECT ts, zone, soil_cistern_pct, soil_pct FROM telemetry_last WHERE zone IN ('bed1','bed2') ORDER BY zone;",
+    "name": "SQLite exec (dbmin FIXED)",
+    "x": 580,
+    "y": 120,
+    "wires": [
+      [
+        "dbg_sql_out_dbmin",
+        "fn_map_rows_to_ui_dbmin"
+      ]
+    ]
+  },
+  {
+    "id": "dbg_sql_out_dbmin",
+    "type": "debug",
+    "z": "tab_serra_dbmin",
+    "name": "DBG SQLite OUT (dbmin)",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 830,
+    "y": 60,
+    "wires": []
+  },
+  {
+    "id": "sw_route_dbmin",
+    "type": "switch",
+    "z": "tab_serra_dbmin",
+    "name": "route bed",
+    "property": "zone",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "bed1",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "bed2",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 820,
+    "y": 140,
+    "wires": [
+      [
+        "fn_map_bed1_dbmin"
+      ],
+      [
+        "fn_map_bed2_dbmin"
+      ]
+    ]
+  },
+  {
+    "id": "fn_map_bed1_dbmin",
+    "type": "function",
+    "z": "tab_serra_dbmin",
+    "name": "map bed1 -> UI",
+    "func": "const r = (msg.payload && msg.payload[0]) ? msg.payload[0] : null;\nif(!r){\n  return [\n    {payload: 0},\n    {payload: 'NO ROW'},\n    {payload: ''}\n  ];\n}\nreturn [\n  {payload: Number(r.soil_cistern_pct ?? 0)},\n  {payload: Number(r.soil_cistern_pct ?? 0)},\n  {payload: String(r.ts ?? '')}\n];",
+    "outputs": 3,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 1030,
+    "y": 100,
+    "wires": [
+      [
+        "ui_g_bed1_cis_dbmin"
+      ],
+      [
+        "ui_t_bed1_soil_dbmin"
+      ],
+      [
+        "ui_t_bed1_ts_dbmin"
+      ]
+    ]
+  },
+  {
+    "id": "fn_map_bed2_dbmin",
+    "type": "function",
+    "z": "tab_serra_dbmin",
+    "name": "map bed2 -> UI",
+    "func": "const r = (msg.payload && msg.payload[0]) ? msg.payload[0] : null;\nif(!r){\n  return [\n    {payload: 0},\n    {payload: 'NO ROW'},\n    {payload: ''}\n  ];\n}\nreturn [\n  {payload: Number(r.soil_cistern_pct ?? 0)},\n  {payload: Number(r.soil_cistern_pct ?? 0)},\n  {payload: String(r.ts ?? '')}\n];",
+    "outputs": 3,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 1030,
+    "y": 180,
+    "wires": [
+      [
+        "ui_g_bed2_cis_dbmin"
+      ],
+      [
+        "ui_t_bed2_soil_dbmin"
+      ],
+      [
+        "ui_t_bed2_ts_dbmin"
+      ]
+    ]
+  },
+  {
+    "id": "ui_g_bed1_cis_dbmin",
+    "type": "ui_gauge",
+    "z": "tab_serra_dbmin",
+    "name": "DB cisterna bed1",
+    "group": "ui_grp_bed1",
+    "order": 8,
+    "width": 6,
+    "height": 4,
+    "gtype": "gage",
+    "title": "DB Cisterna (%)",
+    "label": "%",
+    "format": "{{value}}",
+    "min": "0",
+    "max": "100",
+    "seg1": "10",
+    "seg2": "20",
+    "x": 1310,
+    "y": 60,
+    "wires": [],
+    "d": true,
+    "colors": [
+      "#d9534f",
+      "#f0ad4e",
+      "#5cb85c"
+    ]
+  },
+  {
+    "id": "ui_t_bed1_soil_dbmin",
+    "type": "ui_text",
+    "z": "tab_serra_dbmin",
+    "group": "ui_grp_bed1",
+    "order": 3,
+    "width": 6,
+    "height": 1,
+    "name": "DB soil bed1",
+    "label": "DB Soil (%)",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "x": 1300,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "ui_t_bed1_ts_dbmin",
+    "type": "ui_text",
+    "z": "tab_serra_dbmin",
+    "group": "ui_grp_bed1",
+    "order": 10,
+    "width": 6,
+    "height": 1,
+    "name": "DB ts bed1",
+    "label": "DB Ultimo TS",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "x": 1290,
+    "y": 140,
+    "wires": [],
+    "d": true
+  },
+  {
+    "id": "ui_g_bed2_cis_dbmin",
+    "type": "ui_gauge",
+    "z": "tab_serra_dbmin",
+    "name": "DB cisterna bed2",
+    "group": "ui_grp_bed2",
+    "order": 8,
+    "width": 6,
+    "height": 4,
+    "gtype": "gage",
+    "title": "DB Cisterna (%)",
+    "label": "%",
+    "format": "{{value}}",
+    "min": "0",
+    "max": "100",
+    "seg1": "10",
+    "seg2": "20",
+    "x": 1310,
+    "y": 180,
+    "wires": [],
+    "d": true,
+    "colors": [
+      "#d9534f",
+      "#f0ad4e",
+      "#5cb85c"
+    ]
+  },
+  {
+    "id": "ui_t_bed2_soil_dbmin",
+    "type": "ui_text",
+    "z": "tab_serra_dbmin",
+    "group": "ui_grp_bed2",
+    "order": 3,
+    "width": 6,
+    "height": 1,
+    "name": "DB soil bed2",
+    "label": "DB Soil (%)",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "x": 1300,
+    "y": 220,
+    "wires": []
+  },
+  {
+    "id": "ui_t_bed2_ts_dbmin",
+    "type": "ui_text",
+    "z": "tab_serra_dbmin",
+    "group": "ui_grp_bed2",
+    "order": 10,
+    "width": 6,
+    "height": 1,
+    "name": "DB ts bed2",
+    "label": "DB Ultimo TS",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "x": 1290,
+    "y": 260,
+    "wires": [],
+    "d": true
+  },
+  {
+    "id": "dbg_probe_dbmin_inj",
+    "type": "debug",
+    "z": "tab_serra_dbmin",
+    "name": "PROBE after inject (dbmin)",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 430,
+    "y": 60,
+    "wires": []
+  },
+  {
+    "id": "status_sqlite_dbmin",
+    "type": "status",
+    "z": "tab_serra_dbmin",
+    "name": "STATUS SQLite exec (dbmin)",
+    "scope": [
+      "sqlite_exec_dbmin"
+    ],
+    "x": 520,
+    "y": 160,
+    "wires": [
+      [
+        "dbg_status_sqlite_dbmin"
+      ]
+    ]
+  },
+  {
+    "id": "dbg_status_sqlite_dbmin",
+    "type": "debug",
+    "z": "tab_serra_dbmin",
+    "name": "DBG status sqlite (dbmin)",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 780,
+    "y": 160,
+    "wires": []
+  },
+  {
+    "id": "dbg_after_sqlite_dbmin",
+    "type": "debug",
+    "z": "tab_serra_dbmin",
+    "name": "DBG AFTER SQLITE (dbmin)",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 780,
+    "y": 160,
+    "wires": []
+  },
+  {
+    "id": "dbg_pre_sqlite_dbmin",
+    "type": "debug",
+    "z": "tab_serra_dbmin",
+    "name": "DBG PRE SQLITE (dbmin) - query",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 440,
+    "y": 60,
+    "wires": []
+  },
+  {
+    "id": "catch_sqlite_dbmin",
+    "type": "catch",
+    "z": "tab_serra_dbmin",
+    "name": "CATCH sqlite (dbmin)",
+    "scope": [
+      "sqlite_exec_dbmin"
+    ],
+    "uncaught": false,
+    "x": 780,
+    "y": 180,
+    "wires": [
+      [
+        "dbg_after_sqlite_dbmin"
+      ]
+    ]
+  },
+  {
+    "id": "delay_bed2_dbmin_200ms",
+    "type": "delay",
+    "z": "tab_serra_dbmin",
+    "name": "delay bed2 (200ms)",
+    "pauseType": "delay",
+    "timeout": "200",
+    "timeoutUnits": "milliseconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "allowrate": false,
+    "outputs": 1,
+    "x": 420,
+    "y": 220,
+    "wires": [
+      [
+        "sqlite_exec_dbmin"
+      ]
+    ]
+  },
+  {
+    "id": "dbg_post_sqlite_dbmin",
+    "type": "debug",
+    "z": "tab_serra_dbmin",
+    "name": "DBG POST SQLITE (dbmin) - result",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 880,
+    "y": 260,
+    "wires": []
+  },
+  {
+    "id": "catch_sqlite_dbmin_inline",
+    "type": "catch",
+    "z": "tab_serra_dbmin",
+    "name": "CATCH sqlite_exec_dbmin (inline)",
+    "scope": [
+      "sqlite_exec_dbmin"
+    ],
+    "uncaught": false,
+    "x": 220,
+    "y": 260,
+    "wires": [
+      [
+        "dbg_catch_sqlite_dbmin_inline"
+      ]
+    ]
+  },
+  {
+    "id": "dbg_catch_sqlite_dbmin_inline",
+    "type": "debug",
+    "z": "tab_serra_dbmin",
+    "name": "DBG SQLITE ERROR (inline catch)",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 520,
+    "y": 260,
+    "wires": []
+  },
+  {
+    "id": "status_sqlite_dbmin_inline",
+    "type": "status",
+    "z": "tab_serra_dbmin",
+    "name": "STATUS sqlite_exec_dbmin (inline)",
+    "scope": [
+      "sqlite_exec_dbmin"
+    ],
+    "x": 230,
+    "y": 320,
+    "wires": [
+      [
+        "dbg_status_sqlite_dbmin_inline"
+      ]
+    ]
+  },
+  {
+    "id": "dbg_status_sqlite_dbmin_inline",
+    "type": "debug",
+    "z": "tab_serra_dbmin",
+    "name": "DBG SQLITE STATUS (inline)",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 520,
+    "y": 320,
+    "wires": []
+  },
+  {
+    "id": "inj_sqlite_test_once",
+    "type": "inject",
+    "z": "tab_serra_dbmin",
+    "name": "TEST SQLITE (once on deploy)",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "once": true,
+    "onceDelay": "2",
+    "topic": "test",
+    "payload": "",
+    "payloadType": "date",
+    "x": 160,
+    "y": 260,
+    "wires": [
+      [
+        "fn_sqlite_test_query"
+      ]
+    ]
+  },
+  {
+    "id": "fn_sqlite_test_query",
+    "type": "function",
+    "z": "tab_serra_dbmin",
+    "name": "build test query",
+    "func": "msg.payload = 'SELECT 1 AS ok;'; return msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 420,
+    "y": 260,
+    "wires": [
+      [
+        "sqlite_exec_dbmin"
+      ]
+    ]
+  },
+  {
+    "id": "inj_sqlite_hard_once",
+    "type": "inject",
+    "z": "tab_serra_dbmin",
+    "name": "TEST SQLITE HARD (once)",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "once": true,
+    "onceDelay": "2",
+    "topic": "test_hard",
+    "payload": "",
+    "payloadType": "date",
+    "x": 160,
+    "y": 520,
+    "wires": [
+      [
+        "fn_sqlite_test_query"
+      ]
+    ]
+  },
+  {
+    "id": "sqlite_exec_hard_test",
+    "type": "sqlite",
+    "z": "tab_serra_dbmin",
+    "mydb": "sqlite_db_serra_final",
+    "sqlquery": "msg.payload",
+    "sql": "",
+    "name": "SQLite exec HARD TEST",
+    "x": 450,
+    "y": 520,
+    "wires": [
+      [
+        "dbg_sqlite_hard_out"
+      ]
+    ]
+  },
+  {
+    "id": "dbg_sqlite_hard_out",
+    "type": "debug",
+    "z": "tab_serra_dbmin",
+    "name": "DBG SQLITE HARD OUT",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 740,
+    "y": 520,
+    "wires": []
+  },
+  {
+    "id": "dbg_sqlite_hard_err",
+    "type": "debug",
+    "z": "tab_serra_dbmin",
+    "name": "DBG SQLITE HARD ERROR",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 740,
+    "y": 580,
+    "wires": []
+  },
+  {
+    "id": "catch_sqlite_hard",
+    "type": "catch",
+    "z": "tab_serra_dbmin",
+    "name": "CATCH SQLITE HARD",
+    "scope": [
+      "sqlite_exec_hard_test"
+    ],
+    "uncaught": false,
+    "x": 450,
+    "y": 580,
+    "wires": [
+      [
+        "dbg_sqlite_hard_err"
+      ]
+    ]
+  },
+  {
+    "id": "dbg_sqlite_hard_status",
+    "type": "debug",
+    "z": "tab_serra_dbmin",
+    "name": "DBG SQLITE HARD STATUS",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 740,
+    "y": 640,
+    "wires": []
+  },
+  {
+    "id": "status_sqlite_hard",
+    "type": "status",
+    "z": "tab_serra_dbmin",
+    "name": "STATUS SQLITE HARD",
+    "scope": [
+      "sqlite_exec_hard_test"
+    ],
+    "x": 450,
+    "y": 640,
+    "wires": [
+      [
+        "dbg_sqlite_hard_status"
+      ]
+    ]
+  },
+  {
+    "id": "fn_map_rows_to_ui_dbmin",
+    "type": "function",
+    "z": "tab_serra_dbmin",
+    "name": "map rows -> UI (bed1+bed2)",
+    "func": "// msg.payload = array di righe [{zone, soil_cistern_pct, soil_cistern_pct, ts}, ...]\nconst rows = Array.isArray(msg.payload) ? msg.payload : [];\nconst b1 = rows.find(r => (r.zone||'')==='bed1') || {};\nconst b2 = rows.find(r => (r.zone||'')==='bed2') || {};\n\nfunction num(v){ const n=Number(v); return isFinite(n)?n:0; }\nfunction ts(v){ return String(v ?? ''); }\n\nreturn [\n  {payload: num(b1.soil_cistern_pct)},\n  {payload: num(b1.soil_cistern_pct)},\n  {payload: ts(b1.ts)},\n  {payload: num(b2.soil_cistern_pct)},\n  {payload: num(b2.soil_cistern_pct)},\n  {payload: ts(b2.ts)}\n];",
+    "outputs": 6,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 840,
+    "y": 160,
+    "wires": [
+      [
+        "ui_g_bed1_cis_dbmin"
+      ],
+      [
+        "ui_t_bed1_soil_dbmin"
+      ],
+      [
+        "ui_t_bed1_ts_dbmin"
+      ],
+      [
+        "ui_g_bed2_cis_dbmin"
+      ],
+      [
+        "ui_t_bed2_soil_dbmin"
+      ],
+      [
+        "ui_t_bed2_ts_dbmin"
+      ]
+    ]
+  },
+  {
+    "id": "dbg_after_mapper_dbmin",
+    "type": "debug",
+    "z": "tab_serra_dbmin",
+    "name": "DBG AFTER MAPPER (dbmin)",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 0,
+    "y": 0,
+    "wires": []
+  },
+  {
+    "id": "fn_sql_dbmin_one",
+    "type": "function",
+    "z": "tab_serra_dbmin",
+    "name": "SQL DBMIN one query",
+    "func": "msg.payload = \"SELECT ts, zone, soil_cistern_pct, soil_cistern_ok, soil_pct, soil_temp_c, air_temp_c, air_rh, light_lux, vbat, rssi, weight_g, relay_led, relay_pump, soil1_pct, soil2_pct, motor_last_dir, motor_last_revs, nfc_uid, nfc_present, nfc_has_tag FROM telemetry_last WHERE zone IN (\\'bed1\\',\\'bed2\\') ORDER BY zone;\";\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 360,
+    "y": 120,
+    "wires": [
+      [
+        "sqlite_exec_dbmin"
+      ]
+    ]
+  },
+  {
+    "id": "inj_sql_test",
+    "type": "inject",
+    "z": "tab_sql_test",
+    "name": "TEST query telemetry_last bed1",
+    "props": [],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "bed1",
+    "payload": "SELECT ts, zone, soil_cistern_pct, soil_pct FROM telemetry_last WHERE zone='bed1' LIMIT 1;",
+    "payloadType": "str",
+    "x": 230,
+    "y": 120,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "2ca640e5680702b0",
+    "type": "catch",
+    "z": "f69a7e705c607f98",
+    "name": "CATCH sqlite_exec_dbmin",
+    "scope": [
+      "sqlite_exec_dbmin"
+    ],
+    "uncaught": false,
+    "x": 240,
+    "y": 100,
+    "wires": [
+      [
+        "442b33c30e205419"
+      ]
+    ]
+  },
+  {
+    "id": "442b33c30e205419",
+    "type": "debug",
+    "z": "f69a7e705c607f98",
+    "name": "DBG SQLITE ERROR (catch)",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 520,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "67926b8dcb5ccead",
+    "type": "status",
+    "z": "f69a7e705c607f98",
+    "name": "STATUS sqlite_exec_dbmin",
+    "scope": [
+      "sqlite_exec_dbmin"
+    ],
+    "x": 250,
+    "y": 160,
+    "wires": [
+      [
+        "92c60d7a6d7b6b73"
+      ]
+    ]
+  },
+  {
+    "id": "92c60d7a6d7b6b73",
+    "type": "debug",
+    "z": "f69a7e705c607f98",
+    "name": "DBG SQLITE STATUS",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 500,
+    "y": 160,
+    "wires": []
+  },
+  {
+    "id": "catch_sqlite_exec_dbmin",
+    "type": "catch",
+    "z": "tab_diag_sqlite_dbmin",
+    "name": "CATCH sqlite_exec_dbmin",
+    "scope": [
+      "sqlite_exec_dbmin"
+    ],
+    "uncaught": false,
+    "x": 220,
+    "y": 120,
+    "wires": [
+      [
+        "dbg_sqlite_error_dbmin"
+      ]
+    ]
+  },
+  {
+    "id": "dbg_sqlite_error_dbmin",
+    "type": "debug",
+    "z": "tab_diag_sqlite_dbmin",
+    "name": "DBG SQLITE ERROR (catch)",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 520,
+    "y": 120,
+    "wires": []
+  },
+  {
+    "id": "status_sqlite_exec_dbmin",
+    "type": "status",
+    "z": "tab_diag_sqlite_dbmin",
+    "name": "STATUS sqlite_exec_dbmin",
+    "scope": [
+      "sqlite_exec_dbmin"
+    ],
+    "x": 230,
+    "y": 180,
+    "wires": [
+      [
+        "dbg_sqlite_status_dbmin"
+      ]
+    ]
+  },
+  {
+    "id": "dbg_sqlite_status_dbmin",
+    "type": "debug",
+    "z": "tab_diag_sqlite_dbmin",
+    "name": "DBG SQLITE STATUS",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 500,
+    "y": 180,
+    "wires": []
+  },
+  {
+    "id": "a30fbb9076274384",
+    "type": "inject",
+    "z": "2833751dc3ba54bb",
+    "d": true,
+    "name": "RUN ONCE",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "SELECT ts, zone, soil_cistern_pct, soil_pct FROM telemetry_last ORDER BY ts DESC LIMIT 2;",
+    "payloadType": "str",
+    "x": 220,
+    "y": 120,
+    "wires": [
+      [
+        "ebc3462bc3c143cf"
+      ]
+    ]
+  },
+  {
+    "id": "ebc3462bc3c143cf",
+    "type": "sqlite",
+    "z": "2833751dc3ba54bb",
+    "mydb": "sqlite_db_serra_final",
+    "sqlquery": "msg.payload",
+    "sql": "",
+    "name": "SQLite exec HARD TEST",
+    "x": 480,
+    "y": 120,
+    "wires": [
+      [
+        "9267b41009911eb1"
+      ]
+    ]
+  },
+  {
+    "id": "9267b41009911eb1",
+    "type": "debug",
+    "z": "2833751dc3ba54bb",
+    "name": "DBG SQLITE HARD OUT",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 740,
+    "y": 120,
+    "wires": []
+  },
+  {
+    "id": "inj_sqlite_hard_once_v2",
+    "type": "inject",
+    "z": "tab_sqlite_hard_test_v2",
+    "name": "RUN ONCE",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "SELECT ts, zone, soil_cistern_pct, soil_pct FROM telemetry_last ORDER BY ts DESC LIMIT 2;",
+    "payloadType": "str",
+    "x": 200,
+    "y": 120,
+    "wires": [
+      [
+        "dbg_pre_sqlite_hard_v2",
+        "sqlite_exec_hard_test_v2"
+      ]
+    ]
+  },
+  {
+    "id": "dbg_pre_sqlite_hard_v2",
+    "type": "debug",
+    "z": "tab_sqlite_hard_test_v2",
+    "name": "DBG PRE SQLITE (query)",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 460,
+    "y": 60,
+    "wires": []
+  },
+  {
+    "id": "sqlite_exec_hard_test_v2",
+    "type": "sqlite",
+    "z": "tab_sqlite_hard_test_v2",
+    "mydb": "sqlite_db_serra_final",
+    "sqlquery": "fixed",
+    "sql": "SELECT ts, zone, soil_cistern_pct, soil_pct FROM telemetry_last ORDER BY ts DESC LIMIT 2;",
+    "name": "SQLite exec HARD TEST",
+    "x": 470,
+    "y": 120,
+    "wires": [
+      [
+        "dbg_post_sqlite_hard_v2"
+      ]
+    ]
+  },
+  {
+    "id": "dbg_post_sqlite_hard_v2",
+    "type": "debug",
+    "z": "tab_sqlite_hard_test_v2",
+    "name": "DBG POST SQLITE (rows)",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 740,
+    "y": 120,
+    "wires": []
+  },
+  {
+    "id": "catch_sqlite_hard_v2",
+    "type": "catch",
+    "z": "tab_sqlite_hard_test_v2",
+    "name": "CATCH (sqlite errors)",
+    "scope": [
+      "sqlite_exec_hard_test_v2"
+    ],
+    "uncaught": false,
+    "x": 240,
+    "y": 200,
+    "wires": [
+      [
+        "dbg_catch_sqlite_hard_v2"
+      ]
+    ]
+  },
+  {
+    "id": "dbg_catch_sqlite_hard_v2",
+    "type": "debug",
+    "z": "tab_sqlite_hard_test_v2",
+    "name": "DBG SQLITE ERROR (catch)",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 520,
+    "y": 200,
+    "wires": []
+  },
+  {
+    "id": "status_sqlite_hard_v2",
+    "type": "status",
+    "z": "tab_sqlite_hard_test_v2",
+    "name": "STATUS (sqlite)",
+    "scope": [
+      "sqlite_exec_hard_test_v2"
+    ],
+    "x": 210,
+    "y": 260,
+    "wires": [
+      [
+        "dbg_status_sqlite_hard_v2"
+      ]
+    ]
+  },
+  {
+    "id": "dbg_status_sqlite_hard_v2",
+    "type": "debug",
+    "z": "tab_sqlite_hard_test_v2",
+    "name": "DBG SQLITE STATUS",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 500,
+    "y": 260,
+    "wires": []
+  },
+  {
+    "id": "tab_serra_dbfull",
+    "type": "tab",
+    "label": "DB FULL",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "inj_dbfull_5s",
+    "type": "inject",
+    "z": "tab_serra_dbfull",
+    "name": "Poll DB FULL (5s)",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "5",
+    "once": true,
+    "onceDelay": "1",
+    "topic": "poll",
+    "payload": "",
+    "payloadType": "date",
+    "x": 140,
+    "y": 120,
+    "wires": [
+      [
+        "fn_sql_all_dbfull"
+      ]
+    ],
+    "disabled": true
+  },
+  {
+    "id": "fn_sql_all_dbfull",
+    "type": "function",
+    "z": "tab_serra_dbfull",
+    "name": "SQL (bed1+bed2) FULL",
+    "func": "msg.topic = 'dbfull';\nmsg.payload = \"SELECT * FROM telemetry_last WHERE zone IN ('bed1','bed2');\";\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 390,
+    "y": 120,
+    "wires": [
+      [
+        "sqlite_exec_dbfull"
+      ]
+    ]
+  },
+  {
+    "id": "dbg_pre_sql_dbfull",
+    "type": "debug",
+    "z": "tab_serra_dbfull",
+    "name": "DBG PRE SQLITE (query)",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "x": 650,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "sqlite_exec_dbfull",
+    "type": "sqlite",
+    "z": "tab_serra_dbfull",
+    "mydb": "sqlite_db_serra_final",
+    "sqlquery": "msg.payload",
+    "sql": "",
+    "name": "SQLite exec (FULL)",
+    "x": 650,
+    "y": 140,
+    "wires": [
+      [
+        "dbg_dbfull_post_rows_force",
+        "dbg_sql_out_dbfull",
+        "fn_fanout_rows_dbfull"
+      ]
+    ]
+  },
+  {
+    "id": "dbg_sql_out_dbfull",
+    "type": "debug",
+    "z": "tab_serra_dbfull",
+    "name": "DBG SQLITE OUT (rows)",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 900,
+    "y": 120,
+    "wires": []
+  },
+  {
+    "id": "fn_fanout_rows_dbfull",
+    "type": "function",
+    "z": "tab_serra_dbfull",
+    "name": "FANOUT rows -> per zone",
+    "func": "// payload atteso: array di righe (rows)\nconst rows = Array.isArray(msg.payload) ? msg.payload : [];\nreturn [ rows.map(r => ({ _src: 'db', _src: 'db',...msg, payload: r, zone: r.zone})) ];",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 900,
+    "y": 160,
+    "wires": [
+      [
+        "dbg_dbfull2_after_fanout_FULL",
+        "sw_zone_dbfull"
+      ]
+    ]
+  },
+  {
+    "id": "dbg_after_fanout_dbfull",
+    "type": "debug",
+    "z": "tab_serra_dbfull",
+    "name": "DBG AFTER FANOUT (one row)",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 1150,
+    "y": 120,
+    "wires": []
+  },
+  {
+    "id": "sw_zone_dbfull",
+    "type": "switch",
+    "z": "tab_serra_dbfull",
+    "name": "route by zone",
+    "property": "zone",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "bed1",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "bed2",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 1140,
+    "y": 180,
+    "wires": [
+      [
+        "dbg_dbfull2_after_switch_bed1",
+        "fn_map_bed1_dbfull",
+        "fn_sync_state_bed1_dbfull2",
+        "fn_sync_ui_bed1"
+      ],
+      [
+        "dbg_dbfull2_after_switch_bed2",
+        "fn_map_bed2_dbfull",
+        "fn_sync_state_bed2_dbfull2",
+        "fn_sync_ui_bed2"
+      ]
+    ]
+  },
+  {
+    "id": "ui_g_bed1_cis_dbfull",
+    "type": "ui_gauge",
+    "z": "tab_serra_dbfull",
+    "name": "Cisterna (%)",
+    "group": "ui_grp_bed1",
+    "order": 1,
+    "width": 12,
+    "height": 4,
+    "gtype": "gage",
+    "title": "Cisterna (%)",
+    "label": "",
+    "format": "{{value}}",
+    "min": "0",
+    "max": "100",
+    "seg1": "10",
+    "seg2": "20",
+    "x": 1800,
+    "y": 0,
+    "wires": [],
+    "colors": [
+      "#d9534f",
+      "#f0ad4e",
+      "#5cb85c"
+    ]
+  },
+  {
+    "id": "ui_t_bed1_soil_cistern_ok_dbfull",
+    "type": "ui_text",
+    "z": "tab_serra_dbfull",
+    "group": "ui_grp_bed1",
+    "order": 2,
+    "width": 6,
+    "height": 1,
+    "name": "Cisterna OK",
+    "label": "Cisterna OK",
+    "format": "{{msg.payload ? 'true' : 'false'}}",
+    "layout": "row-spread",
+    "x": 1800,
+    "y": 0,
+    "wires": []
+  },
+  {
+    "id": "ui_t_bed1_soil_pct_dbfull",
+    "type": "ui_text",
+    "z": "tab_serra_dbfull",
+    "group": "ui_grp_bed1",
+    "order": 7,
+    "width": 6,
+    "height": 1,
+    "name": "Soil %",
+    "label": "Soil %",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "x": 1800,
+    "y": 0,
+    "wires": []
+  },
+  {
+    "id": "ui_t_bed1_weight_g_dbfull",
+    "type": "ui_text",
+    "z": "tab_serra_dbfull",
+    "group": "ui_grp_bed1",
+    "order": 8,
+    "width": 6,
+    "height": 1,
+    "name": "Weight g",
+    "label": "Weight g",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "x": 1800,
+    "y": 0,
+    "wires": []
+  },
+  {
+    "id": "ui_t_bed1_relay_led_dbfull",
+    "type": "ui_text",
+    "z": "tab_serra_dbfull",
+    "group": "ui_grp_bed1",
+    "order": 12,
+    "width": 6,
+    "height": 1,
+    "name": "LED",
+    "label": "LED",
+    "format": "{{msg.payload ? 'true' : 'false'}}",
+    "layout": "row-spread",
+    "x": 1800,
+    "y": 0,
+    "wires": []
+  },
+  {
+    "id": "ui_t_bed1_relay_pump_dbfull",
+    "type": "ui_text",
+    "z": "tab_serra_dbfull",
+    "group": "ui_grp_bed1",
+    "order": 9,
+    "width": 6,
+    "height": 1,
+    "name": "PUMP",
+    "label": "PUMP",
+    "format": "{{msg.payload ? 'true' : 'false'}}",
+    "layout": "row-spread",
+    "x": 1800,
+    "y": 0,
+    "wires": []
+  },
+  {
+    "id": "ui_t_bed1_nfc_present_dbfull",
+    "type": "ui_text",
+    "z": "tab_serra_dbfull",
+    "group": "ui_grp_bed1",
+    "order": 5,
+    "width": 6,
+    "height": 1,
+    "name": "NFC present",
+    "label": "NFC present",
+    "format": "{{msg.payload ? 'true' : 'false'}}",
+    "layout": "row-spread",
+    "x": 1800,
+    "y": 0,
+    "wires": []
+  },
+  {
+    "id": "ui_t_bed1_nfc_has_tag_dbfull",
+    "type": "ui_text",
+    "z": "tab_serra_dbfull",
+    "group": "ui_grp_bed1",
+    "order": 4,
+    "width": 6,
+    "height": 1,
+    "name": "NFC has tag",
+    "label": "NFC has tag",
+    "format": "{{msg.payload ? 'true' : 'false'}}",
+    "layout": "row-spread",
+    "x": 1800,
+    "y": 0,
+    "wires": []
+  },
+  {
+    "id": "ui_t_bed1_nfc_uid_dbfull",
+    "type": "ui_text",
+    "z": "tab_serra_dbfull",
+    "group": "ui_grp_bed1",
+    "order": 6,
+    "width": 6,
+    "height": 1,
+    "name": "NFC uid",
+    "label": "NFC uid",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "x": 1800,
+    "y": 0,
+    "wires": []
+  },
+  {
+    "id": "ui_g_bed2_cis_dbfull",
+    "type": "ui_gauge",
+    "z": "tab_serra_dbfull",
+    "name": "Cisterna (%)",
+    "group": "ui_grp_bed2",
+    "order": 1,
+    "width": 12,
+    "height": 4,
+    "gtype": "gage",
+    "title": "Cisterna (%)",
+    "label": "",
+    "format": "{{value}}",
+    "min": "0",
+    "max": "100",
+    "seg1": "10",
+    "seg2": "20",
+    "x": 1800,
+    "y": 0,
+    "wires": [],
+    "colors": [
+      "#d9534f",
+      "#f0ad4e",
+      "#5cb85c"
+    ]
+  },
+  {
+    "id": "ui_t_bed2_soil_cistern_ok_dbfull",
+    "type": "ui_text",
+    "z": "tab_serra_dbfull",
+    "group": "ui_grp_bed2",
+    "order": 2,
+    "width": 6,
+    "height": 1,
+    "name": "Cisterna OK",
+    "label": "Cisterna OK",
+    "format": "{{msg.payload ? 'true' : 'false'}}",
+    "layout": "row-spread",
+    "x": 1800,
+    "y": 0,
+    "wires": []
+  },
+  {
+    "id": "ui_t_bed2_soil_pct_dbfull",
+    "type": "ui_text",
+    "z": "tab_serra_dbfull",
+    "group": "ui_grp_bed2",
+    "order": 7,
+    "width": 6,
+    "height": 1,
+    "name": "Soil %",
+    "label": "Soil %",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "x": 1800,
+    "y": 0,
+    "wires": []
+  },
+  {
+    "id": "ui_t_bed2_weight_g_dbfull",
+    "type": "ui_text",
+    "z": "tab_serra_dbfull",
+    "group": "ui_grp_bed2",
+    "order": 8,
+    "width": 6,
+    "height": 1,
+    "name": "Weight g",
+    "label": "Weight g",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "x": 1800,
+    "y": 0,
+    "wires": []
+  },
+  {
+    "id": "ui_t_bed2_relay_led_dbfull",
+    "type": "ui_text",
+    "z": "tab_serra_dbfull",
+    "group": "ui_grp_bed2",
+    "order": 12,
+    "width": 6,
+    "height": 1,
+    "name": "LED",
+    "label": "LED",
+    "format": "{{msg.payload ? 'true' : 'false'}}",
+    "layout": "row-spread",
+    "x": 1800,
+    "y": 0,
+    "wires": []
+  },
+  {
+    "id": "ui_t_bed2_relay_pump_dbfull",
+    "type": "ui_text",
+    "z": "tab_serra_dbfull",
+    "group": "ui_grp_bed2",
+    "order": 9,
+    "width": 6,
+    "height": 1,
+    "name": "PUMP",
+    "label": "PUMP",
+    "format": "{{msg.payload ? 'true' : 'false'}}",
+    "layout": "row-spread",
+    "x": 1800,
+    "y": 0,
+    "wires": []
+  },
+  {
+    "id": "ui_t_bed2_motor_last_dir_dbfull",
+    "type": "ui_text",
+    "z": "tab_serra_dbfull",
+    "group": "ui_grp_bed2",
+    "order": 10,
+    "width": 6,
+    "height": 1,
+    "name": "Motor dir",
+    "label": "Motor dir",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "x": 1800,
+    "y": 0,
+    "wires": []
+  },
+  {
+    "id": "ui_t_bed2_motor_last_revs_dbfull",
+    "type": "ui_text",
+    "z": "tab_serra_dbfull",
+    "group": "ui_grp_bed2",
+    "order": 11,
+    "width": 6,
+    "height": 1,
+    "name": "Motor revs",
+    "label": "Motor revs",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "x": 1800,
+    "y": 0,
+    "wires": []
+  },
+  {
+    "id": "ui_t_bed2_nfc_present_dbfull",
+    "type": "ui_text",
+    "z": "tab_serra_dbfull",
+    "group": "ui_grp_bed2",
+    "order": 5,
+    "width": 6,
+    "height": 1,
+    "name": "NFC present",
+    "label": "NFC present",
+    "format": "{{msg.payload ? 'true' : 'false'}}",
+    "layout": "row-spread",
+    "x": 1800,
+    "y": 0,
+    "wires": []
+  },
+  {
+    "id": "ui_t_bed2_nfc_has_tag_dbfull",
+    "type": "ui_text",
+    "z": "tab_serra_dbfull",
+    "group": "ui_grp_bed2",
+    "order": 4,
+    "width": 6,
+    "height": 1,
+    "name": "NFC has tag",
+    "label": "NFC has tag",
+    "format": "{{msg.payload ? 'true' : 'false'}}",
+    "layout": "row-spread",
+    "x": 1800,
+    "y": 0,
+    "wires": []
+  },
+  {
+    "id": "ui_t_bed2_nfc_uid_dbfull",
+    "type": "ui_text",
+    "z": "tab_serra_dbfull",
+    "group": "ui_grp_bed2",
+    "order": 6,
+    "width": 6,
+    "height": 1,
+    "name": "NFC uid",
+    "label": "NFC uid",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "x": 1800,
+    "y": 0,
+    "wires": []
+  },
+  {
+    "id": "fn_map_bed1_dbfull",
+    "type": "function",
+    "z": "tab_serra_dbfull",
+    "name": "map bed1 -> UI (FULL)",
+    "func": "const r = msg.payload || {};\n\nfunction v(key, fb=\"-\") {\n  const x = r[key];\n  if (x === null || x === undefined || x === \"\") return fb;\n  return x;\n}\n\nfunction num(key, fb=0) {\n  const x = r[key];\n  if (x === null || x === undefined || x === \"\") return fb;\n  const n = Number(x);\n  return Number.isFinite(n) ? n : fb;\n}\n\nmsg.zone = \"bed1\";\n\n// 0 gauge cisterna (pct)\nconst out0  = {...msg, payload: num(\"soil_cistern_pct\", 0)};\n// 1 ts\nconst out1  = {...msg, payload: v(\"ts\")};\n// 2 soil_cistern_ok\nconst out2  = {...msg, payload: v(\"soil_cistern_ok\")};\n// 3 soil_pct\nconst out3  = {...msg, payload: num(\"soil_pct\", 0)};\n// 4 soil_temp_c\nconst out4  = {...msg, payload: num(\"soil_temp_c\", 0)};\n// 5 air_temp_c\nconst out5  = {...msg, payload: num(\"air_temp_c\", 0)};\n// 6 air_rh\nconst out6  = {...msg, payload: num(\"air_rh\", 0)};\n// 7 light_lux\nconst out7  = {...msg, payload: num(\"light_lux\", 0)};\n// 8 vbat\nconst out8  = {...msg, payload: num(\"vbat\", 0)};\n// 9 rssi\nconst out9  = {...msg, payload: v(\"rssi\")};\n// 10 weight_g\nconst out10 = {...msg, payload: num(\"weight_g\", 0)};\n// 11 relay_led\nconst out11 = {...msg, payload: v(\"relay_led\")};\n// 12 relay_pump\nconst out12 = {...msg, payload: v(\"relay_pump\")};\n// 13 soil1_pct\nconst out13 = {...msg, payload: num(\"soil1_pct\", 0)};\n// 14 soil2_pct\nconst out14 = {...msg, payload: num(\"soil2_pct\", 0)};\n// 15 motor_last_dir\nconst out15 = {...msg, payload: v(\"motor_last_dir\")};\n// 16 motor_last_revs\nconst out16 = {...msg, payload: num(\"motor_last_revs\", 0)};\n// 17 nfc_present\nconst out17 = {...msg, payload: v(\"nfc_present\")};\n// 18 nfc_has_tag\nconst out18 = {...msg, payload: v(\"nfc_has_tag\")};\n// 19 nfc_uid\nconst out19 = {...msg, payload: v(\"nfc_uid\")};\n\nreturn [out0,out1,out2,out3,out4,out5,out6,out7,out8,out9,out10,out11,out12,out13,out14,out15,out16,out17,out18,out19];",
+    "outputs": 20,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1420,
+    "y": 140,
+    "wires": [
+      [
+        "ui_g_bed1_cis_dbfull"
+      ],
+      [],
+      [
+        "ui_t_bed1_soil_cistern_ok_dbfull"
+      ],
+      [
+        "ui_t_bed1_soil_pct_dbfull"
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+        "ui_t_bed1_weight_g_dbfull"
+      ],
+      [
+        "ui_t_bed1_relay_led_dbfull"
+      ],
+      [
+        "ui_t_bed1_relay_pump_dbfull"
+      ],
+      [],
+      [],
+      [],
+      [],
+      [
+        "ui_t_bed1_nfc_present_dbfull"
+      ],
+      [
+        "ui_t_bed1_nfc_has_tag_dbfull"
+      ],
+      [
+        "ui_t_bed1_nfc_uid_dbfull"
+      ]
+    ]
+  },
+  {
+    "id": "fn_map_bed2_dbfull",
+    "type": "function",
+    "z": "tab_serra_dbfull",
+    "name": "map bed2 -> UI (FULL)",
+    "func": "const r = msg.payload || {};\n\nfunction v(key, fb=\"-\") {\n  const x = r[key];\n  if (x === null || x === undefined || x === \"\") return fb;\n  return x;\n}\n\nfunction num(key, fb=0) {\n  const x = r[key];\n  if (x === null || x === undefined || x === \"\") return fb;\n  const n = Number(x);\n  return Number.isFinite(n) ? n : fb;\n}\n\nmsg.zone = \"bed2\";\n\n// 0 gauge cisterna (pct)\nconst out0  = {...msg, payload: num(\"soil_cistern_pct\", 0)};\n// 1 ts\nconst out1  = {...msg, payload: v(\"ts\")};\n// 2 soil_cistern_ok\nconst out2  = {...msg, payload: v(\"soil_cistern_ok\")};\n// 3 soil_pct\nconst out3  = {...msg, payload: num(\"soil_pct\", 0)};\n// 4 soil_temp_c\nconst out4  = {...msg, payload: num(\"soil_temp_c\", 0)};\n// 5 air_temp_c\nconst out5  = {...msg, payload: num(\"air_temp_c\", 0)};\n// 6 air_rh\nconst out6  = {...msg, payload: num(\"air_rh\", 0)};\n// 7 light_lux\nconst out7  = {...msg, payload: num(\"light_lux\", 0)};\n// 8 vbat\nconst out8  = {...msg, payload: num(\"vbat\", 0)};\n// 9 rssi\nconst out9  = {...msg, payload: v(\"rssi\")};\n// 10 weight_g\nconst out10 = {...msg, payload: num(\"weight_g\", 0)};\n// 11 relay_led\nconst out11 = {...msg, payload: v(\"relay_led\")};\n// 12 relay_pump\nconst out12 = {...msg, payload: v(\"relay_pump\")};\n// 13 soil1_pct\nconst out13 = {...msg, payload: num(\"soil1_pct\", 0)};\n// 14 soil2_pct\nconst out14 = {...msg, payload: num(\"soil2_pct\", 0)};\n// 15 motor_last_dir\nconst out15 = {...msg, payload: v(\"motor_last_dir\")};\n// 16 motor_last_revs\nconst out16 = {...msg, payload: num(\"motor_last_revs\", 0)};\n// 17 nfc_present\nconst out17 = {...msg, payload: v(\"nfc_present\")};\n// 18 nfc_has_tag\nconst out18 = {...msg, payload: v(\"nfc_has_tag\")};\n// 19 nfc_uid\nconst out19 = {...msg, payload: v(\"nfc_uid\")};\n\nreturn [out0,out1,out2,out3,out4,out5,out6,out7,out8,out9,out10,out11,out12,out13,out14,out15,out16,out17,out18,out19];",
+    "outputs": 20,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1420,
+    "y": 220,
+    "wires": [
+      [
+        "ui_g_bed2_cis_dbfull"
+      ],
+      [],
+      [
+        "ui_t_bed2_soil_cistern_ok_dbfull"
+      ],
+      [
+        "ui_t_bed2_soil_pct_dbfull"
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+        "ui_t_bed2_weight_g_dbfull"
+      ],
+      [
+        "ui_t_bed2_relay_led_dbfull"
+      ],
+      [
+        "ui_t_bed2_relay_pump_dbfull"
+      ],
+      [],
+      [],
+      [
+        "ui_t_bed2_motor_last_dir_dbfull"
+      ],
+      [
+        "ui_t_bed2_motor_last_revs_dbfull"
+      ],
+      [
+        "ui_t_bed2_nfc_present_dbfull"
+      ],
+      [
+        "ui_t_bed2_nfc_has_tag_dbfull"
+      ],
+      [
+        "ui_t_bed2_nfc_uid_dbfull"
+      ]
+    ]
+  },
+  {
+    "id": "tab_serra_cmd2db",
+    "type": "tab",
+    "label": "CMD→DB",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "mqtt_in_led_1f7294592985",
+    "type": "mqtt in",
+    "z": "tab_serra_cmd2db",
+    "name": "MQTT IN ack (ALL)",
+    "topic": "serra/ack/#",
+    "qos": "0",
+    "datatype": "auto",
+    "broker": "mqtt_broker_local",
+    "nl": false,
+    "rap": true,
+    "rh": 0,
+    "inputs": 0,
+    "x": 180,
+    "y": 120,
+    "wires": [
+      [
+        "json_led_478e5f4913d1"
+      ]
+    ]
+  },
+  {
+    "id": "mqtt_in_pump_1269d8165c4d",
+    "type": "mqtt in",
+    "z": "tab_serra_cmd2db",
+    "name": "MQTT IN ack PUMP",
+    "topic": "serra/ack/+/relay/pump",
+    "qos": "0",
+    "datatype": "auto",
+    "broker": "mqtt_broker_local",
+    "nl": false,
+    "rap": true,
+    "rh": 0,
+    "inputs": 0,
+    "x": 180,
+    "y": 200,
+    "wires": [
+      [
+        "json_pump_b591d4736704",
+        "fn_mqtt_ts_any"
+      ]
+    ],
+    "d": true
+  },
+  {
+    "id": "json_led_478e5f4913d1",
+    "type": "json",
+    "z": "tab_serra_cmd2db",
+    "name": "JSON",
+    "property": "payload",
+    "action": "obj",
+    "pretty": false,
+    "x": 380,
+    "y": 120,
+    "wires": [
+      [
+        "fn_ack2sql_3492eebf5cd642ea"
+      ]
+    ]
+  },
+  {
+    "id": "json_pump_b591d4736704",
+    "type": "json",
+    "z": "tab_serra_cmd2db",
+    "name": "JSON",
+    "property": "payload",
+    "action": "obj",
+    "pretty": false,
+    "x": 380,
+    "y": 200,
+    "wires": [
+      [
+        "fn_sql_pump_2afa08b3e7e8"
+      ]
+    ],
+    "d": true
+  },
+  {
+    "id": "fn_sql_led_f4b06a5cde83",
+    "type": "function",
+    "z": "tab_serra_cmd2db",
+    "name": "SQL UPDATE relay_led",
+    "func": "// ACK->DB: relay_led\nconst parts = (msg.topic||'').split('/');\nconst zone = parts[2] || '';\nlet on = 0;\n\ntry {\n  const p = msg.payload;\n  if (p && typeof p === 'object') {\n    on = (p.on === true || p.on === 1 || p.on === '1' || p.on === 'true' || p.on === 'on') ? 1 : 0;\n  } else {\n    const s = (p ?? '').toString().trim().toLowerCase();\n    on = (s === '1' || s === 'true' || s === 'on') ? 1 : 0;\n  }\n} catch(e) {}\n\nmsg.topic = 'ack2db';\nmsg.payload = \"UPDATE telemetry_last SET relay_led=\"+on+\", ts=datetime('now','localtime') WHERE zone='\"+zone+\"';\";\nreturn msg;\n",
+    "outputs": 1,
+    "x": 610,
+    "y": 120,
+    "wires": [
+      [
+        "sqlite_cmd2db_9aae69ecf128",
+        "dbg_cmd2db_ok_de71827a1d87"
+      ]
+    ],
+    "d": true
+  },
+  {
+    "id": "fn_sql_pump_2afa08b3e7e8",
+    "type": "function",
+    "z": "tab_serra_cmd2db",
+    "name": "SQL UPDATE relay_pump",
+    "func": "// ACK->DB: relay_pump\nconst parts = (msg.topic||'').split('/');\nconst zone = parts[2] || '';\nlet on = 0;\n\ntry {\n  const p = msg.payload;\n  if (p && typeof p === 'object') {\n    on = (p.on === true || p.on === 1 || p.on === '1' || p.on === 'true' || p.on === 'on') ? 1 : 0;\n  } else {\n    const s = (p ?? '').toString().trim().toLowerCase();\n    on = (s === '1' || s === 'true' || s === 'on') ? 1 : 0;\n  }\n} catch(e) {}\n\nmsg.topic = 'ack2db';\nmsg.payload = \"UPDATE telemetry_last SET relay_pump=\"+on+\", ts=datetime('now','localtime') WHERE zone='\"+zone+\"';\";\nreturn msg;\n",
+    "outputs": 1,
+    "x": 610,
+    "y": 200,
+    "wires": [
+      [
+        "sqlite_cmd2db_9aae69ecf128",
+        "dbg_cmd2db_ok_de71827a1d87"
+      ]
+    ],
+    "d": true
+  },
+  {
+    "id": "sqlite_cmd2db_9aae69ecf128",
+    "type": "sqlite",
+    "z": "tab_serra_cmd2db",
+    "name": "SQLite exec CMD→DB",
+    "mydb": "sqlite_db_serra_final",
+    "sqlquery": "msg.payload",
+    "sql": "",
+    "x": 860,
+    "y": 160,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "dbg_cmd2db_ok_de71827a1d87",
+    "type": "debug",
+    "z": "tab_serra_cmd2db",
+    "name": "DBG CMD→DB SQL",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "x": 880,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "dbg_cmd2db_err_f3372e286861",
+    "type": "debug",
+    "z": "tab_serra_cmd2db",
+    "name": "DBG CMD→DB ERROR",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 880,
+    "y": 240,
+    "wires": []
+  },
+  {
+    "id": "catch_cmd2db_5f36bbc7dcb4",
+    "type": "catch",
+    "z": "tab_serra_cmd2db",
+    "name": "CATCH sqlite errors",
+    "scope": [
+      "sqlite_cmd2db_9aae69ecf128"
+    ],
+    "uncaught": false,
+    "x": 620,
+    "y": 280,
+    "wires": [
+      [
+        "dbg_cmd2db_err_f3372e286861"
+      ]
+    ]
+  },
+  {
+    "id": "dbg_DBFULL_PRE_SQL",
+    "type": "debug",
+    "z": "tab_serra_dbfull",
+    "name": "DBFULL PRE SQL (query)",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 0,
+    "y": 0,
+    "wires": [
+      [
+        "sqlite_exec_dbfull"
+      ]
+    ]
+  },
+  {
+    "id": "dbg_DBFULL_POST_SQL",
+    "type": "debug",
+    "z": "tab_serra_dbfull",
+    "name": "DBFULL POST SQL (rows)",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 0,
+    "y": 0,
+    "wires": []
+  },
+  {
+    "id": "dbg_DBFULL_SQL_STATUS",
+    "type": "debug",
+    "z": "tab_serra_dbfull",
+    "name": "DBFULL SQLITE STATUS",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 0,
+    "y": 0,
+    "wires": []
+  },
+  {
+    "id": "status_dbfull_sqlite",
+    "type": "status",
+    "z": "tab_serra_dbfull",
+    "name": "STATUS dbfull sqlite",
+    "scope": [
+      "sqlite_exec_dbfull"
+    ],
+    "x": 0,
+    "y": 0,
+    "wires": [
+      [
+        "dbg_DBFULL_SQL_STATUS"
+      ]
+    ]
+  },
+  {
+    "id": "dbg_DBFULL_SQL_ERROR",
+    "type": "debug",
+    "z": "tab_serra_dbfull",
+    "name": "DBFULL SQLITE ERROR (catch)",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 0,
+    "y": 0,
+    "wires": []
+  },
+  {
+    "id": "catch_dbfull_sqlite",
+    "type": "catch",
+    "z": "tab_serra_dbfull",
+    "name": "Catch DBFULL sqlite",
+    "scope": [
+      "sqlite_exec_dbfull"
+    ],
+    "uncaught": false,
+    "x": 0,
+    "y": 0,
+    "wires": [
+      [
+        "dbg_DBFULL_SQL_ERROR"
+      ]
+    ]
+  },
+  {
+    "id": "status_sqlite_dbfull",
+    "type": "status",
+    "z": "tab_serra_dbfull",
+    "name": "DBFULL SQLITE STATUS",
+    "scope": [
+      "sqlite_exec_dbfull"
+    ],
+    "x": 540,
+    "y": 260,
+    "wires": [
+      [
+        "dbg_sqlite_dbfull_status"
+      ]
+    ]
+  },
+  {
+    "id": "dbg_sqlite_dbfull_status",
+    "type": "debug",
+    "z": "tab_serra_dbfull",
+    "name": "DBFULL SQLITE STATUS (debug)",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 780,
+    "y": 260,
+    "wires": []
+  },
+  {
+    "id": "dbg_dbfull_post_rows_force",
+    "type": "debug",
+    "z": "tab_serra_dbfull",
+    "name": "DBFULL POST SQL (ROWS) [FORCE]",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 860,
+    "y": 420,
+    "wires": []
+  },
+  {
+    "id": "catch_dbfull_sqlite_force",
+    "type": "catch",
+    "z": "tab_serra_dbfull",
+    "name": "Catch DBFULL sqlite",
+    "scope": [
+      "sqlite_exec_dbfull"
+    ],
+    "uncaught": false,
+    "x": 520,
+    "y": 480,
+    "wires": [
+      [
+        "dbg_dbfull_sqlite_error_force"
+      ]
+    ]
+  },
+  {
+    "id": "dbg_dbfull_sqlite_error_force",
+    "type": "debug",
+    "z": "tab_serra_dbfull",
+    "name": "DBFULL SQLITE ERROR [FORCE]",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 860,
+    "y": 480,
+    "wires": []
+  },
+  {
+    "id": "status_dbfull_sqlite_force",
+    "type": "status",
+    "z": "tab_serra_dbfull",
+    "name": "DBFULL SQLITE STATUS [FORCE]",
+    "scope": [
+      "sqlite_exec_dbfull"
+    ],
+    "x": 650,
+    "y": 360,
+    "wires": [
+      [
+        "dbg_dbfull_post_rows_force"
+      ]
+    ]
+  },
+  {
+    "id": "inj_dbfull2_5s",
+    "type": "inject",
+    "z": "tab_serra_dbfull",
+    "name": "DBFULL2 Poll (5s)",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "5",
+    "once": true,
+    "onceDelay": "1",
+    "topic": "dbfull2",
+    "payload": "",
+    "payloadType": "date",
+    "x": 140,
+    "y": 520,
+    "wires": [
+      [
+        "dbg_dbfull2_pre",
+        "sqlite_exec_dbfull2"
+      ]
+    ]
+  },
+  {
+    "id": "fn_sql_all_dbfull2",
+    "type": "function",
+    "z": "tab_serra_dbfull",
+    "name": "DBFULL2 build SQL",
+    "func": "msg.payload = \"SELECT * FROM telemetry_last WHERE zone IN ('bed1','bed2');\";\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 360,
+    "y": 520,
+    "wires": [],
+    "d": true
+  },
+  {
+    "id": "dbg_dbfull2_pre",
+    "type": "debug",
+    "z": "tab_serra_dbfull",
+    "name": "DBFULL2 PRE (query)",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 600,
+    "y": 480,
+    "wires": []
+  },
+  {
+    "id": "sqlite_exec_dbfull2",
+    "type": "sqlite",
+    "z": "tab_serra_dbfull",
+    "name": "DBFULL2 SQLite",
+    "mydb": "sqlite_db_serra_final",
+    "sqlquery": "fixed",
+    "x": 610,
+    "y": 560,
+    "wires": [
+      [
+        "dbg_dbfull2_sql_out_FULL",
+        "fn_fanout_rows_dbfull",
+        "fn_dbfull2_sync_relays_to_ui"
+      ]
+    ],
+    "sql": "SELECT * FROM telemetry_last WHERE zone IN ('bed1','bed2');"
+  },
+  {
+    "id": "dbg_dbfull2_post",
+    "type": "debug",
+    "z": "tab_serra_dbfull",
+    "name": "DBFULL2 POST (rows)",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 840,
+    "y": 560,
+    "wires": []
+  },
+  {
+    "id": "catch_dbfull2",
+    "type": "catch",
+    "z": "tab_serra_dbfull",
+    "name": "DBFULL2 Catch sqlite",
+    "scope": [
+      "sqlite_exec_dbfull2"
+    ],
+    "uncaught": false,
+    "x": 610,
+    "y": 620,
+    "wires": [
+      [
+        "dbg_dbfull2_post"
+      ]
+    ]
+  },
+  {
+    "id": "status_dbfull2",
+    "type": "status",
+    "z": "tab_serra_dbfull",
+    "name": "DBFULL2 Status sqlite",
+    "scope": [
+      "sqlite_exec_dbfull2"
+    ],
+    "x": 610,
+    "y": 660,
+    "wires": [
+      [
+        "dbg_dbfull2_post"
+      ]
+    ]
+  },
+  {
+    "id": "dbg_dbfull2_sql_out_FULL",
+    "type": "debug",
+    "z": "tab_serra_dbfull",
+    "name": "DBFULL2 SQL OUT (FULL)",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 820,
+    "y": 120,
+    "wires": []
+  },
+  {
+    "id": "dbg_dbfull2_after_fanout_FULL",
+    "type": "debug",
+    "z": "tab_serra_dbfull",
+    "name": "DBFULL2 AFTER FANOUT (FULL)",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 820,
+    "y": 200,
+    "wires": []
+  },
+  {
+    "id": "dbg_dbfull2_after_switch_bed1",
+    "type": "debug",
+    "z": "tab_serra_dbfull",
+    "name": "DBFULL2 AFTER SWITCH bed1",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 820,
+    "y": 280,
+    "wires": []
+  },
+  {
+    "id": "dbg_dbfull2_after_switch_bed2",
+    "type": "debug",
+    "z": "tab_serra_dbfull",
+    "name": "DBFULL2 AFTER SWITCH bed2",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 820,
+    "y": 340,
+    "wires": []
+  },
+  {
+    "id": "ui_grp_bed1_cmd",
+    "type": "ui_group",
+    "name": "Comandi Bed 1",
+    "tab": "5611bb81b0923213",
+    "order": 3,
+    "disp": true,
+    "width": "12",
+    "collapse": false
+  },
+  {
+    "id": "ui_grp_bed2_cmd",
+    "type": "ui_group",
+    "name": "Comandi Bed 2",
+    "tab": "5611bb81b0923213",
+    "order": 4,
+    "disp": true,
+    "width": "12",
+    "collapse": false
+  },
+  {
+    "id": "mqtt_out_serra_cmd",
+    "type": "mqtt out",
+    "z": "tab_serra_dbmin",
+    "name": "MQTT OUT serra/cmd",
+    "topic": "",
+    "qos": "",
+    "retain": "",
+    "respTopic": "",
+    "contentType": "",
+    "userProps": "",
+    "correl": "",
+    "expiry": "",
+    "broker": "mqtt_broker_local",
+    "x": 900,
+    "y": 420,
+    "wires": []
+  },
+  {
+    "id": "ui_sw_bed1_led",
+    "type": "ui_switch",
+    "z": "tab_serra_dbmin",
+    "name": "LED bed1",
+    "label": "LED",
+    "tooltip": "",
+    "group": "ui_grp_bed1_cmd",
+    "order": 6,
+    "width": 6,
+    "height": 1,
+    "passthru": false,
+    "decouple": false,
+    "topic": "bed1/led",
+    "style": "",
+    "onvalue": 1,
+    "onvalueType": "num",
+    "onicon": "fa-lightbulb-o",
+    "oncolor": "",
+    "offvalue": 0,
+    "offvalueType": "num",
+    "officon": "fa-lightbulb-o",
+    "offcolor": "",
+    "animate": true,
+    "x": 180,
+    "y": 200,
+    "wires": [
+      [
+        "fn_bed1_led_cmd"
+      ]
+    ]
+  },
+  {
+    "id": "ui_sl_bed1_pump_sec",
+    "type": "ui_slider",
+    "z": "tab_serra_dbmin",
+    "name": "Pump seconds bed1",
+    "label": "Pompa (s)",
+    "tooltip": "",
+    "group": "ui_grp_bed1_cmd",
+    "order": 1,
+    "width": 6,
+    "height": 1,
+    "passthru": true,
+    "outs": "all",
+    "topic": "",
+    "min": 0,
+    "max": 2,
+    "step": 0.1,
+    "x": 170,
+    "y": 240,
+    "wires": [
+      [
+        "ch_bed1_pump_sec",
+        "fn_fmt_bed1_pump_sec"
+      ]
+    ],
+    "format": "{{value}} s",
+    "showValue": true,
+    "showvalue": true
+  },
+  {
+    "id": "ui_sw_bed1_pump",
+    "z": "tab_serra_dbmin",
+    "x": 180,
+    "y": 280,
+    "group": "ui_grp_bed1_cmd",
+    "order": 2,
+    "width": 6,
+    "height": 1,
+    "wires": [
+      [
+        "fn_bed1_pump_cmd"
+      ]
+    ],
+    "d": true,
+    "type": "ui_button",
+    "name": "PUMP bed1 (BTN)",
+    "label": "Pompa (click)",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "",
+    "payload": 1,
+    "payloadType": "num",
+    "topic": "ui/bed1/pump",
+    "topicType": "str",
+    "passthru": true
+  },
+  {
+    "id": "ui_btn_bed1_reset_weight",
+    "type": "ui_button",
+    "z": "tab_serra_dbmin",
+    "name": "RESET bilancia bed1",
+    "group": "ui_grp_bed1_cmd",
+    "order": 5,
+    "width": 12,
+    "height": 1,
+    "passthru": false,
+    "label": "Reset bilancia",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "fa-refresh",
+    "payload": "true",
+    "payloadType": "bool",
+    "topic": "",
+    "x": 200,
+    "y": 400,
+    "wires": [
+      [
+        "fn_bed1_reset_weight_cmd"
+      ]
+    ],
+    "d": true
+  },
+  {
+    "id": "ch_bed1_pump_sec",
+    "type": "change",
+    "z": "tab_serra_dbmin",
+    "name": "store pump_sec bed1",
+    "rules": [
+      {
+        "t": "set",
+        "p": "bed1_pump_sec",
+        "pt": "flow",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 480,
+    "y": 240,
+    "wires": []
+  },
+  {
+    "id": "fn_bed1_led_cmd",
+    "type": "function",
+    "z": "tab_serra_dbmin",
+    "name": "CMD LED bed1",
+    "func": "// FIX_LED_CMD_bed1_HOLD15000\ntry {\n  const p = msg && msg.payload;\n  let v = p;\n  if (typeof v === 'string') v = v.trim().toLowerCase();\n\n  const on = (v === 1 || v === '1' || v === true || v === 'true' || v === 'on');\n\n  // salva desired state per HOLD\n  global.set('desired_led_bed1', on);\n  global.set('desired_led_until_bed1', Date.now() + 15000);\n\n  node.warn('bed1 LED CMD IN  topic='+(msg.topic||'')+' payload='+(typeof p)+':'+JSON.stringify(p)+' => on='+on);\n\n  // manda comando a ESP via mqtt_out_serra_cmd\n  msg.topic = 'serra/cmd/bed1/relay/led';\n  msg.payload = on ? { on: true, secs: 1800 } : { on: false };\n\n  node.warn('bed1 LED CMD OUT topic='+msg.topic+' payload='+JSON.stringify(msg.payload));\n  return msg;\n} catch(e) {\n  node.warn('bed1 LED CMD ERR '+e);\n  return null;\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 520,
+    "y": 200,
+    "wires": [
+      [
+        "mqtt_out_serra_cmd"
+      ]
+    ]
+  },
+  {
+    "id": "fn_bed1_pump_cmd",
+    "type": "function",
+    "z": "tab_serra_dbmin",
+    "name": "CMD PUMP bed1",
+    "func": "// CMD PUMP bed1 -> MQTT solo su click\n// Invia secs come NUMERO (decimale con punto). Accetta anche input \"0,5\" e lo converte in 0.5.\ntry {\n  let v = flow.get('bed1_pump_sec');\n  if (typeof v === 'string') v = v.trim().replace(',', '.');\n  let secs = Number(v);\n\n  if (!isFinite(secs) || secs <= 0) secs = 1;\n\n  // limita precisione (evita numeri lunghi tipo 0.30000000004)\n  secs = Math.round(secs * 1000) / 1000;\n\n  const out0 = {\n    topic: 'serra/cmd/bed1/relay/pump',\n    payload: { on: true, secs: secs }\n  };\n\n  node.warn('bed1 PUMP CLICK secs=' + secs + ' -> ' + out0.topic + ' ' + JSON.stringify(out0.payload));\n  return [out0];\n} catch(e) {\n  node.warn('bed1 PUMP ERR: ' + e);\n  return null;\n}\n",
+    "outputs": 2,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 530,
+    "y": 280,
+    "wires": [
+      [
+        "mqtt_out_serra_cmd"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "fn_bed1_reset_weight_cmd",
+    "type": "function",
+    "z": "tab_serra_dbmin",
+    "name": "CMD RESET WEIGHT bed1",
+    "func": "// GUARD: se arriva da sync DB non pubblicare comandi\nif (msg && (msg._src === 'db' || msg._ui_sync === true)) { return null; }\nmsg.topic = \"serra/cmd/{bed}/weight/reset\".replace(\"{bed}\",\"bed1\");\nmsg.payload = { reset: true };\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 560,
+    "y": 400,
+    "wires": [
+      [
+        "mqtt_out_serra_cmd"
+      ]
+    ]
+  },
+  {
+    "id": "ui_sw_bed2_led",
+    "type": "ui_switch",
+    "z": "tab_serra_dbmin",
+    "name": "LED bed2",
+    "label": "LED",
+    "tooltip": "",
+    "group": "ui_grp_bed2_cmd",
+    "order": 7,
+    "width": 6,
+    "height": 1,
+    "passthru": false,
+    "decouple": false,
+    "topic": "bed2/led",
+    "style": "",
+    "onvalue": 1,
+    "onvalueType": "num",
+    "onicon": "fa-lightbulb-o",
+    "oncolor": "",
+    "offvalue": 0,
+    "offvalueType": "num",
+    "officon": "fa-lightbulb-o",
+    "offcolor": "",
+    "animate": true,
+    "x": 180,
+    "y": 520,
+    "wires": [
+      [
+        "fn_bed2_led_cmd"
+      ]
+    ]
+  },
+  {
+    "id": "ui_sl_bed2_pump_sec",
+    "type": "ui_slider",
+    "z": "tab_serra_dbmin",
+    "name": "Pump seconds bed2",
+    "label": "Pompa (s)",
+    "tooltip": "",
+    "group": "ui_grp_bed2_cmd",
+    "order": 1,
+    "width": 6,
+    "height": 1,
+    "passthru": true,
+    "outs": "all",
+    "topic": "",
+    "min": 0,
+    "max": 2,
+    "step": 0.1,
+    "x": 170,
+    "y": 560,
+    "wires": [
+      [
+        "ch_bed2_pump_sec",
+        "fn_fmt_bed2_pump_sec"
+      ]
+    ],
+    "format": "{{value}} s",
+    "showValue": true,
+    "showvalue": true
+  },
+  {
+    "id": "ui_sw_bed2_pump",
+    "z": "tab_serra_dbmin",
+    "x": 180,
+    "y": 600,
+    "group": "ui_grp_bed2_cmd",
+    "order": 2,
+    "width": 6,
+    "height": 1,
+    "wires": [
+      [
+        "fn_bed2_pump_cmd"
+      ]
+    ],
+    "d": true,
+    "type": "ui_button",
+    "name": "PUMP bed2 (BTN)",
+    "label": "Pompa (click)",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "",
+    "payload": 1,
+    "payloadType": "num",
+    "topic": "ui/bed2/pump",
+    "topicType": "str",
+    "passthru": true
+  },
+  {
+    "id": "ui_sl_bed2_motor_sec",
+    "type": "ui_slider",
+    "z": "tab_serra_dbmin",
+    "name": "Motor revs bed2",
+    "label": "Motore (giri)",
+    "tooltip": "",
+    "group": "ui_grp_bed2_cmd",
+    "order": 3,
+    "width": 6,
+    "height": 1,
+    "passthru": true,
+    "outs": "all",
+    "topic": "",
+    "min": 0,
+    "max": 5,
+    "step": 0.1,
+    "x": 170,
+    "y": 640,
+    "wires": [
+      [
+        "ch_bed2_motor_sec",
+        "fn_fmt_bed2_motor_revs"
+      ]
+    ],
+    "format": "{{value}} giri",
+    "showValue": true,
+    "showvalue": true
+  },
+  {
+    "id": "ui_sw_bed2_motor",
+    "z": "tab_serra_dbmin",
+    "x": 180,
+    "y": 680,
+    "group": "ui_grp_bed2_cmd",
+    "order": 4,
+    "width": 6,
+    "height": 1,
+    "wires": [
+      [
+        "fn_bed2_motor_cmd"
+      ]
+    ],
+    "d": true,
+    "type": "ui_button",
+    "name": "MOTOR bed2 (BTN)",
+    "label": "Motore (click)",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "",
+    "payload": 1,
+    "payloadType": "num",
+    "topic": "ui/bed2/motor",
+    "topicType": "str",
+    "passthru": true
+  },
+  {
+    "id": "ui_btn_bed2_reset_weight",
+    "type": "ui_button",
+    "z": "tab_serra_dbmin",
+    "name": "RESET bilancia bed2",
+    "group": "ui_grp_bed2_cmd",
+    "order": 6,
+    "width": 12,
+    "height": 1,
+    "passthru": false,
+    "label": "Reset bilancia",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "fa-refresh",
+    "payload": "true",
+    "payloadType": "bool",
+    "topic": "",
+    "x": 200,
+    "y": 720,
+    "wires": [
+      [
+        "fn_bed2_reset_weight_cmd"
+      ]
+    ],
+    "d": true
+  },
+  {
+    "id": "ch_bed2_pump_sec",
+    "type": "change",
+    "z": "tab_serra_dbmin",
+    "name": "store pump_sec bed2",
+    "rules": [
+      {
+        "t": "set",
+        "p": "bed2_pump_sec",
+        "pt": "flow",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 480,
+    "y": 560,
+    "wires": []
+  },
+  {
+    "id": "ch_bed2_motor_sec",
+    "type": "change",
+    "z": "tab_serra_dbmin",
+    "name": "store motor_revs bed2",
+    "rules": [
+      {
+        "t": "set",
+        "p": "bed2_motor_revs",
+        "pt": "flow",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 480,
+    "y": 640,
+    "wires": []
+  },
+  {
+    "id": "fn_bed2_led_cmd",
+    "type": "function",
+    "z": "tab_serra_dbmin",
+    "name": "CMD LED bed2",
+    "func": "// FIX_LED_CMD_bed2_HOLD15000\ntry {\n  const p = msg && msg.payload;\n  let v = p;\n  if (typeof v === 'string') v = v.trim().toLowerCase();\n\n  const on = (v === 1 || v === '1' || v === true || v === 'true' || v === 'on');\n\n  // salva desired state per HOLD\n  global.set('desired_led_bed2', on);\n  global.set('desired_led_until_bed2', Date.now() + 15000);\n\n  node.warn('bed2 LED CMD IN  topic='+(msg.topic||'')+' payload='+(typeof p)+':'+JSON.stringify(p)+' => on='+on);\n\n  // manda comando a ESP via mqtt_out_serra_cmd\n  msg.topic = 'serra/cmd/bed2/relay/led';\n  msg.payload = on ? { on: true, secs: 1800 } : { on: false };\n\n  node.warn('bed2 LED CMD OUT topic='+msg.topic+' payload='+JSON.stringify(msg.payload));\n  return msg;\n} catch(e) {\n  node.warn('bed2 LED CMD ERR '+e);\n  return null;\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 520,
+    "y": 520,
+    "wires": [
+      [
+        "mqtt_out_serra_cmd"
+      ]
+    ]
+  },
+  {
+    "id": "fn_bed2_pump_cmd",
+    "type": "function",
+    "z": "tab_serra_dbmin",
+    "name": "CMD PUMP bed2",
+    "func": "// CMD PUMP bed2 -> MQTT solo su click\n// Invia secs come NUMERO (decimale con punto). Accetta anche input \"0,5\" e lo converte in 0.5.\ntry {\n  let v = flow.get('bed2_pump_sec');\n  if (typeof v === 'string') v = v.trim().replace(',', '.');\n  let secs = Number(v);\n\n  if (!isFinite(secs) || secs <= 0) secs = 1;\n\n  // limita precisione (evita numeri lunghi tipo 0.30000000004)\n  secs = Math.round(secs * 1000) / 1000;\n\n  const out0 = {\n    topic: 'serra/cmd/bed2/relay/pump',\n    payload: { on: true, secs: secs }\n  };\n\n  node.warn('bed2 PUMP CLICK secs=' + secs + ' -> ' + out0.topic + ' ' + JSON.stringify(out0.payload));\n  return [out0];\n} catch(e) {\n  node.warn('bed2 PUMP ERR: ' + e);\n  return null;\n}\n",
+    "outputs": 2,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 530,
+    "y": 600,
+    "wires": [
+      [
+        "mqtt_out_serra_cmd"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "fn_bed2_motor_cmd",
+    "type": "function",
+    "z": "tab_serra_dbmin",
+    "name": "CMD MOTOR bed2",
+    "func": "// CMD MOTOR bed2 (BUTTON) -> MQTT solo su click\n// NOTE: invia revs come STRINGA con virgola (es: \"0,7\") per compatibilità firmware\ntry {\n  if (!msg) return null;\n\n  let revs = Number(flow.get('bed2_motor_revs'));\n  if (!isFinite(revs) || revs < 0.1) revs = 0.1;\n\n  let revsStr = String(revs).replace('.', ',');\n  const dir = String(flow.get('bed2_motor_dir') || 'down');\n\n  const out0 = {\n    topic: 'serra/cmd/bed2/motor',\n    payload: { revs: revsStr, dir: dir }\n  };\n  node.warn('bed2 MOTOR CLICK revs='+revsStr+' dir='+dir+' -> '+out0.topic+' '+JSON.stringify(out0.payload));\n  return [out0];\n} catch(e) {\n  node.warn('bed2 MOTOR ERR: '+e);\n  return null;\n}\n",
+    "outputs": 2,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 540,
+    "y": 680,
+    "wires": [
+      [
+        "mqtt_out_serra_cmd"
+      ]
+    ]
+  },
+  {
+    "id": "fn_bed2_reset_weight_cmd",
+    "type": "function",
+    "z": "tab_serra_dbmin",
+    "name": "CMD RESET WEIGHT bed2",
+    "func": "// GUARD: se arriva da sync DB non pubblicare comandi\nif (msg && (msg._src === 'db' || msg._ui_sync === true)) { return null; }\nmsg.topic = \"serra/cmd/{bed}/weight/reset\".replace(\"{bed}\",\"bed2\");\nmsg.payload = { reset: true };\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 560,
+    "y": 720,
+    "wires": [
+      [
+        "mqtt_out_serra_cmd"
+      ]
+    ]
+  },
+  {
+    "id": "fn_dbfull2_sync_relays_to_ui",
+    "type": "function",
+    "z": "tab_serra_dbmin",
+    "name": "DBFULL2 sync relay_led/pump -> UI",
+    "func": "// Accetta:\n// - msg.payload array di righe, oppure singola riga con zone.\n// Emette 4 msg: bed1 led/pump, bed2 led/pump (solo se presenti).\nfunction emitIf(zone, field, uiId) {\n  if (!zone) return null;\n  const v = zone[field];\n  if (v === undefined || v === null) return null;\n  return { payload: !!v, _ui_target: uiId };\n}\n\nlet rows = [];\nif (Array.isArray(msg.payload)) rows = msg.payload;\nelse if (msg.payload && typeof msg.payload === 'object') rows = [msg.payload];\n\nlet bed1 = rows.find(r => r.zone === 'bed1');\nlet bed2 = rows.find(r => r.zone === 'bed2');\n\nreturn [\n  emitIf(bed1, 'relay_pump', 'ui_sw_bed1_pump'),\n  emitIf(bed1, 'relay_led',  'ui_sw_bed1_led'),\n  emitIf(bed2, 'relay_pump', 'ui_sw_bed2_pump'),\n  emitIf(bed2, 'relay_led',  'ui_sw_bed2_led'),\n];",
+    "outputs": 4,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 520,
+    "y": 740,
+    "wires": [
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "fn_bed1_tare_cmd",
+    "type": "function",
+    "z": "tab_serra_dbmin",
+    "name": "bed1 TARE -> MQTT",
+    "func": "// GUARD: se arriva da sync DB non pubblicare comandi\nif (msg && (msg._src === 'db' || msg._ui_sync === true)) { return null; }\n// Tara bilancia: serra/cmd/bed1/tare { \"tare\": true }\nmsg.topic = \"serra/cmd/bed1/tare\";\nmsg.payload = { tare: true };\nreturn msg;\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 520,
+    "y": 80,
+    "wires": [
+      [
+        "mqtt_out_serra_cmd"
+      ]
+    ]
+  },
+  {
+    "id": "ui_btn_bed1_tare",
+    "type": "ui_button",
+    "z": "tab_serra_dbmin",
+    "name": "Tara bed1",
+    "group": "ui_grp_bed1_cmd",
+    "order": 14,
+    "width": 6,
+    "height": 1,
+    "passthru": false,
+    "label": "TARA",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "fa-balance-scale",
+    "payload": "true",
+    "payloadType": "bool",
+    "topic": "",
+    "x": 260,
+    "y": 80,
+    "wires": [
+      [
+        "fn_bed1_tare_cmd"
+      ]
+    ]
+  },
+  {
+    "id": "fn_bed2_tare_cmd",
+    "type": "function",
+    "z": "tab_serra_dbmin",
+    "name": "bed2 TARE -> MQTT",
+    "func": "// GUARD: se arriva da sync DB non pubblicare comandi\nif (msg && (msg._src === 'db' || msg._ui_sync === true)) { return null; }\n// Tara bilancia: serra/cmd/bed2/tare { \"tare\": true }\nmsg.topic = \"serra/cmd/bed2/tare\";\nmsg.payload = { tare: true };\nreturn msg;\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 520,
+    "y": 140,
+    "wires": [
+      [
+        "mqtt_out_serra_cmd"
+      ]
+    ]
+  },
+  {
+    "id": "ui_btn_bed2_tare",
+    "type": "ui_button",
+    "z": "tab_serra_dbmin",
+    "name": "Tara bed2",
+    "group": "ui_grp_bed2_cmd",
+    "order": 8,
+    "width": 6,
+    "height": 1,
+    "passthru": false,
+    "label": "TARA",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "fa-balance-scale",
+    "payload": "true",
+    "payloadType": "bool",
+    "topic": "",
+    "x": 260,
+    "y": 140,
+    "wires": [
+      [
+        "fn_bed2_tare_cmd"
+      ]
+    ]
+  },
+  {
+    "id": "fn_sync_state_bed1_dbfull2",
+    "type": "function",
+    "z": "tab_serra_dbfull",
+    "name": "DBFULL2 SYNC bed1 (led/pump/motor)",
+    "func": "const r = (msg && msg.payload && typeof msg.payload==='object') ? msg.payload : null;\nif (!r) return null;\nconst out=[];\nout.push({payload: !!r.relay_led});\nout.push({payload: !!r.relay_pump});\nout.push({payload: false});\nreturn out;",
+    "outputs": 3,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 820,
+    "y": 160,
+    "wires": [
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "fn_sync_state_bed2_dbfull2",
+    "type": "function",
+    "z": "tab_serra_dbfull",
+    "name": "DBFULL2 SYNC bed2 (led/pump/motor)",
+    "func": "const r = (msg && msg.payload && typeof msg.payload==='object') ? msg.payload : null;\nif (!r) return null;\nconst out=[];\nout.push({payload: !!r.relay_led});\nout.push({payload: !!r.relay_pump});\nout.push({payload: false});\nreturn out;",
+    "outputs": 3,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 820,
+    "y": 220,
+    "wires": [
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "ui_txt_bed1_pump_sel",
+    "type": "ui_text",
+    "z": "tab_serra_dbfull",
+    "group": "ui_grp_bed1_cmd",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "name": "Pompa selezione bed1",
+    "label": "Pompa selezionata",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 1240,
+    "y": 520,
+    "wires": []
+  },
+  {
+    "id": "ui_txt_bed2_pump_sel",
+    "type": "ui_text",
+    "z": "tab_serra_dbfull",
+    "group": "ui_grp_bed2_cmd",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "name": "Pompa selezione bed2",
+    "label": "Pompa selezionata",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 1240,
+    "y": 620,
+    "wires": []
+  },
+  {
+    "id": "ui_txt_bed2_motor_sel",
+    "type": "ui_text",
+    "z": "tab_serra_dbfull",
+    "group": "ui_grp_bed2_cmd",
+    "order": 4,
+    "width": 0,
+    "height": 0,
+    "name": "Motore selezione bed2",
+    "label": "Motore selezionato",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 1240,
+    "y": 660,
+    "wires": []
+  },
+  {
+    "id": "fn_fmt_bed1_pump_sec",
+    "type": "function",
+    "z": "tab_serra_dbfull",
+    "name": "FMT bed1 pump seconds",
+    "func": "let v = Number(msg.payload);\nif (!isFinite(v)) return null;\n// evita -0\nif (Math.abs(v) < 1e-9) v = 0;\n// arrotonda a 1 decimale per pompa, e 1 decimale per revs\nv = Math.round(v*10)/10;\nmsg.payload = v + \" s\";\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1000,
+    "y": 520,
+    "wires": [
+      [
+        "ui_txt_bed1_pump_sel"
+      ]
+    ]
+  },
+  {
+    "id": "fn_fmt_bed2_pump_sec",
+    "type": "function",
+    "z": "tab_serra_dbfull",
+    "name": "FMT bed2 pump seconds",
+    "func": "let v = Number(msg.payload);\nif (!isFinite(v)) return null;\n// evita -0\nif (Math.abs(v) < 1e-9) v = 0;\n// arrotonda a 1 decimale per pompa, e 1 decimale per revs\nv = Math.round(v*10)/10;\nmsg.payload = v + \" s\";\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1000,
+    "y": 620,
+    "wires": [
+      [
+        "ui_txt_bed2_pump_sel"
+      ]
+    ]
+  },
+  {
+    "id": "fn_fmt_bed2_motor_revs",
+    "type": "function",
+    "z": "tab_serra_dbfull",
+    "name": "FMT bed2 motor revs",
+    "func": "let v = Number(msg.payload);\nif (!isFinite(v)) return null;\n// evita -0\nif (Math.abs(v) < 1e-9) v = 0;\n// arrotonda a 1 decimale per pompa, e 1 decimale per revs\nv = Math.round(v*10)/10;\nmsg.payload = v + \" giri\";\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1000,
+    "y": 660,
+    "wires": [
+      [
+        "ui_txt_bed2_motor_sel"
+      ]
+    ]
+  },
+  {
+    "id": "fn_sync_ui_bed1",
+    "type": "function",
+    "z": "tab_serra_dbfull",
+    "name": "SYNC UI state bed1 (from DB)",
+    "func": "// FIX_SYNC_UI_bed1_WITH_HOLD15000\n// Input: msg.payload = row (telemetry_last)\n// Out1 pump, Out2 motor, Out3 led (numeric 1/0)\ntry {\n  const r = (msg && msg.payload) ? msg.payload : {};\n\n  const pump = Number(r.relay_pump ?? 0) ? 1 : 0;\n\n  const mdir  = String(r.motor_last_dir ?? 'none');\n  const mrevs = Number(r.motor_last_revs ?? 0);\n  const motor = ((mdir !== 'none') && (mrevs > 0)) ? 1 : 0;\n\n  // LED: durante HOLD usa desired, fuori hold usa DB\n  const until = Number(global.get('desired_led_until_bed1') ?? 0);\n  let led;\n  if (Date.now() < until) {\n    led = (global.get('desired_led_bed1') ? 1 : 0);\n  } else {\n    led = Number(r.relay_led ?? 0) ? 1 : 0;\n  }\n\n  // NOTE: passthru=false sugli switch evita che questo rientri come comando\n  const msgPump  = { topic: 'bed1/pump',  payload: pump,  _src:'sync' };\n  const msgMotor = { topic: 'bed1/motor', payload: motor, _src:'sync' };\n  const msgLed   = { topic: 'bed1/led',   payload: led,   _src:'sync' };\n\n  return [msgPump, msgMotor, msgLed];\n} catch(e) {\n  node.warn('bed1 SYNC UI ERR '+e);\n  return null;\n}\n",
+    "outputs": 3,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 0,
+    "y": 0,
+    "wires": [
+      [],
+      [],
+      [
+        "ui_sw_bed1_led"
+      ]
+    ]
+  },
+  {
+    "id": "fn_sync_ui_bed2",
+    "type": "function",
+    "z": "tab_serra_dbfull",
+    "name": "SYNC UI state bed2 (from DB)",
+    "func": "// FIX_SYNC_UI_bed2_WITH_HOLD15000\n// Input: msg.payload = row (telemetry_last)\n// Out1 pump, Out2 motor, Out3 led (numeric 1/0)\ntry {\n  const r = (msg && msg.payload) ? msg.payload : {};\n\n  const pump = Number(r.relay_pump ?? 0) ? 1 : 0;\n\n  const mdir  = String(r.motor_last_dir ?? 'none');\n  const mrevs = Number(r.motor_last_revs ?? 0);\n  const motor = ((mdir !== 'none') && (mrevs > 0)) ? 1 : 0;\n\n  // LED: durante HOLD usa desired, fuori hold usa DB\n  const until = Number(global.get('desired_led_until_bed2') ?? 0);\n  let led;\n  if (Date.now() < until) {\n    led = (global.get('desired_led_bed2') ? 1 : 0);\n  } else {\n    led = Number(r.relay_led ?? 0) ? 1 : 0;\n  }\n\n  // NOTE: passthru=false sugli switch evita che questo rientri come comando\n  const msgPump  = { topic: 'bed2/pump',  payload: pump,  _src:'sync' };\n  const msgMotor = { topic: 'bed2/motor', payload: motor, _src:'sync' };\n  const msgLed   = { topic: 'bed2/led',   payload: led,   _src:'sync' };\n\n  return [msgPump, msgMotor, msgLed];\n} catch(e) {\n  node.warn('bed2 SYNC UI ERR '+e);\n  return null;\n}\n",
+    "outputs": 3,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 0,
+    "y": 0,
+    "wires": [
+      [],
+      [],
+      [
+        "ui_sw_bed2_led"
+      ]
+    ]
+  },
+  {
+    "id": "ui_tpl_bed1_pump",
+    "type": "ui_template",
+    "z": "tab_serra_dbmin",
+    "group": "ui_grp_bed1_cmd",
+    "name": "PUMP bed1 (tpl)",
+    "order": 2,
+    "width": 6,
+    "height": 1,
+    "format": "<div layout=\"row\" layout-align=\"space-between center\" style=\"padding:6px 8px;\">\n  <div style=\"font-weight:600;\">Pompa</div>\n  <md-switch aria-label=\"Pompa\" ng-model=\"state\" ng-change=\"onToggle()\"></md-switch>\n</div>\n\n<script>\n(function(scope) {\n  scope.state = false;\n  scope.topic = \"bed1/pump\";\n\n  function toBool(v) {\n    if (v === true) return true;\n    if (v === false) return false;\n    if (v === 1 || v === \"1\") return true;\n    if (v === 0 || v === \"0\") return false;\n    // fallback: truthy\n    return !!v;\n  }\n\n  scope.onToggle = function() {\n    // momentary UI: mostra ON per un attimo, invia comando, poi torna OFF\n    if (scope.state) {\n      scope.send({ topic: scope.topic, payload: 1 });\n      setTimeout(function() {\n        scope.state = false;\n        if (typeof scope.$applyAsync === \"function\") scope.$applyAsync();\n      }, 600);\n    }\n  };\n})(scope);\n</script>",
+    "storeOutMessages": false,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "x": 220,
+    "y": 320,
+    "wires": [
+      [
+        "fn_bed1_pump_cmd"
+      ]
+    ]
+  },
+  {
+    "id": "ui_tpl_bed1_led",
+    "type": "ui_template",
+    "z": "tab_serra_dbmin",
+    "group": "ui_grp_bed1_cmd",
+    "name": "LED bed1 (tpl)",
+    "order": 6,
+    "width": 6,
+    "height": 1,
+    "format": "<div layout=\"row\" layout-align=\"space-between center\" style=\"padding:6px 8px;\">\n  <div style=\"font-weight:600;\">LED</div>\n  <md-switch aria-label=\"LED\" ng-model=\"state\" ng-change=\"onToggle()\"></md-switch>\n</div>\n\n<script>\n(function(scope) {\n  scope.state = false;\n  scope.topic = \"bed1/led\";\n\n  function toBool(v) {\n    if (v === true) return true;\n    if (v === false) return false;\n    if (v === 1 || v === \"1\") return true;\n    if (v === 0 || v === \"0\") return false;\n    // fallback: truthy\n    return !!v;\n  }\n\n  scope.onToggle = function() {\n    scope.send({ topic: scope.topic, payload: !!scope.state });\n  };\n\n  scope.$watch('msg', function(msg) {\n    if (!msg) return;\n    if (typeof msg.payload === \"undefined\") return;\n    scope.state = toBool(msg.payload);\n  });\n})(scope);\n</script>",
+    "storeOutMessages": false,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "x": 220,
+    "y": 240,
+    "wires": [],
+    "d": true
+  },
+  {
+    "id": "ui_tpl_bed2_pump",
+    "type": "ui_template",
+    "z": "tab_serra_dbmin",
+    "group": "ui_grp_bed2_cmd",
+    "name": "PUMP bed2 (tpl)",
+    "order": 2,
+    "width": 6,
+    "height": 1,
+    "format": "<div layout=\"row\" layout-align=\"space-between center\" style=\"padding:6px 8px;\">\n  <div style=\"font-weight:600;\">Pompa</div>\n  <md-switch aria-label=\"Pompa\" ng-model=\"state\" ng-change=\"onToggle()\"></md-switch>\n</div>\n\n<script>\n(function(scope) {\n  scope.state = false;\n  scope.topic = \"bed2/pump\";\n\n  function toBool(v) {\n    if (v === true) return true;\n    if (v === false) return false;\n    if (v === 1 || v === \"1\") return true;\n    if (v === 0 || v === \"0\") return false;\n    // fallback: truthy\n    return !!v;\n  }\n\n  scope.onToggle = function() {\n    // momentary UI: mostra ON per un attimo, invia comando, poi torna OFF\n    if (scope.state) {\n      scope.send({ topic: scope.topic, payload: 1 });\n      setTimeout(function() {\n        scope.state = false;\n        if (typeof scope.$applyAsync === \"function\") scope.$applyAsync();\n      }, 600);\n    }\n  };\n})(scope);\n</script>",
+    "storeOutMessages": false,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "x": 220,
+    "y": 640,
+    "wires": [
+      [
+        "fn_bed2_pump_cmd"
+      ]
+    ]
+  },
+  {
+    "id": "ui_tpl_bed2_motor",
+    "type": "ui_template",
+    "z": "tab_serra_dbmin",
+    "group": "ui_grp_bed2_cmd",
+    "name": "MOTOR bed2 (tpl)",
+    "order": 4,
+    "width": 6,
+    "height": 1,
+    "format": "<div layout=\"row\" layout-align=\"space-between center\" style=\"padding:6px 8px;\">\n  <div style=\"font-weight:600;\">Motore</div>\n  <md-switch aria-label=\"Motore\" ng-model=\"state\" ng-change=\"onToggle()\"></md-switch>\n</div>\n\n<script>\n(function(scope) {\n  scope.state = false;\n  scope.topic = \"bed2/motor\";\n\n  function toBool(v) {\n    if (v === true) return true;\n    if (v === false) return false;\n    if (v === 1 || v === \"1\") return true;\n    if (v === 0 || v === \"0\") return false;\n    // fallback: truthy\n    return !!v;\n  }\n\n  scope.onToggle = function() {\n    // momentary UI: mostra ON per un attimo, invia comando, poi torna OFF\n    if (scope.state) {\n      scope.send({ topic: scope.topic, payload: 1 });\n      setTimeout(function() {\n        scope.state = false;\n        if (typeof scope.$applyAsync === \"function\") scope.$applyAsync();\n      }, 600);\n    }\n  };\n})(scope);\n</script>",
+    "storeOutMessages": false,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "x": 220,
+    "y": 720,
+    "wires": [
+      [
+        "fn_bed2_motor_cmd"
+      ]
+    ]
+  },
+  {
+    "id": "ui_tpl_bed2_led",
+    "type": "ui_template",
+    "z": "tab_serra_dbmin",
+    "group": "ui_grp_bed2_cmd",
+    "name": "LED bed2 (tpl)",
+    "order": 7,
+    "width": 6,
+    "height": 1,
+    "format": "<div layout=\"row\" layout-align=\"space-between center\" style=\"padding:6px 8px;\">\n  <div style=\"font-weight:600;\">LED</div>\n  <md-switch aria-label=\"LED\" ng-model=\"state\" ng-change=\"onToggle()\"></md-switch>\n</div>\n\n<script>\n(function(scope) {\n  scope.state = false;\n  scope.topic = \"bed2/led\";\n\n  function toBool(v) {\n    if (v === true) return true;\n    if (v === false) return false;\n    if (v === 1 || v === \"1\") return true;\n    if (v === 0 || v === \"0\") return false;\n    // fallback: truthy\n    return !!v;\n  }\n\n  scope.onToggle = function() {\n    scope.send({ topic: scope.topic, payload: !!scope.state });\n  };\n\n  scope.$watch('msg', function(msg) {\n    if (!msg) return;\n    if (typeof msg.payload === \"undefined\") return;\n    scope.state = toBool(msg.payload);\n  });\n})(scope);\n</script>",
+    "storeOutMessages": false,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "x": 220,
+    "y": 560,
+    "wires": [],
+    "d": true
+  },
+  {
+    "id": "ui_t_mode_db",
+    "type": "ui_text",
+    "z": "e0674b6f1cc308de",
+    "group": "ui_grp_bed1",
+    "name": "Modalità (DB)",
+    "label": "Modalità (DB)",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "x": 1800,
+    "y": 0,
+    "wires": [],
+    "order": 99
+  },
+  {
+    "id": "fn_mode_map_ui",
+    "type": "function",
+    "z": "e0674b6f1cc308de",
+    "name": "MODE MAP UI",
+    "func": "// MODE MAP UI (DB -> UI text + switch)\n// Input: msg.payload = rows [{bed:'bed1', mode:'outdoor'}, ...]\ntry {\n  const rows = Array.isArray(msg.payload) ? msg.payload : [];\n  let hasOutdoor = false;\n  let hasIndoor  = false;\n\n  for (const r of rows) {\n    if (!r) continue;\n    const m = String(r.mode ?? '').trim().toLowerCase();\n    if (m === 'outdoor') hasOutdoor = true;\n    if (m === 'indoor')  hasIndoor  = true;\n  }\n\n  // se mismatch, preferisci outdoor (così lo switch va ON se almeno uno è outdoor)\n  let mode = 'unknown';\n  if (hasOutdoor) mode = 'outdoor';\n  else if (hasIndoor) mode = 'indoor';\n\n  msg.topic = 'mode/global';\n  msg.payload = mode; // ui_switch onvalue='outdoor' offvalue='indoor'\n  return msg;\n} catch(e) {\n  node.warn('MODE MAP ERR: ' + e);\n  return null;\n}\n",
+    "outputs": 1,
+    "x": 830,
+    "y": 120,
+    "wires": [
+      [
+        "ui_t_mode_db",
+        "ui_sw_mode_global_inout"
+      ]
+    ]
+  },
+  {
+    "id": "inj_mode_poll_5s",
+    "type": "inject",
+    "z": "e0674b6f1cc308de",
+    "name": "MODE poll 5s",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "5",
+    "once": true,
+    "onceDelay": "0.5",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 140,
+    "y": 120,
+    "wires": [
+      [
+        "fn_mode_select_sql"
+      ]
+    ],
+    "crontab": ""
+  },
+  {
+    "id": "fn_mode_select_sql",
+    "type": "function",
+    "z": "e0674b6f1cc308de",
+    "name": "MODE SELECT SQL",
+    "func": "// MODE SELECT SQL (bed_state) - NO BIND + DBG\nmsg.topic = `\nSELECT bed, mode\nFROM bed_state\nORDER BY bed;\n`;\n\n// IMPORTANT: evita bind params dal timestamp dell'inject\nmsg.payload = [];\n\nnode.warn('MODE SELECT SQL topic=' + msg.topic.replace(/\\s+/g,' ').trim());\nreturn msg;\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 360,
+    "y": 120,
+    "wires": [
+      [
+        "sqlite_exec_mode"
+      ]
+    ]
+  },
+  {
+    "id": "sqlite_exec_mode",
+    "type": "sqlite",
+    "z": "e0674b6f1cc308de",
+    "mydb": "sqlite_db_serra_final",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "name": "SQLite exec MODE",
+    "x": 600,
+    "y": 120,
+    "wires": [
+      [
+        "fn_mode_map_ui"
+      ]
+    ]
+  },
+  {
+    "id": "sqlite_exec_mode_set",
+    "type": "sqlite",
+    "z": "e0674b6f1cc308de",
+    "name": "SQLite exec MODE SET",
+    "mydb": "sqlite_db_serra_final",
+    "sqlquery": "msg.topic",
+    "sql": "",
+    "x": 720,
+    "y": 220,
+    "wires": [
+      [
+        "fn_mode_select_sql"
+      ]
+    ]
+  },
+  {
+    "id": "fn_mode_update_sql",
+    "type": "function",
+    "z": "e0674b6f1cc308de",
+    "name": "MODE UPDATE SQL",
+    "func": "// MODE UPDATE SQL (bed_state.mode) - GLOBAL\n// Input: msg.payload = 'indoor' | 'outdoor'\n// Output: msg.topic = UPDATE ... (no MQTT)\n\ntry {\n  let mode = (msg.payload ?? '').toString().trim().toLowerCase();\n  if (mode !== 'indoor' && mode !== 'outdoor') {\n    // fallback se arrivasse boolean/num dal dashboard\n    const v = msg.payload;\n    mode = (v === true || v === 1 || v === '1' || v === 'true' || v === 'on') ? 'outdoor' : 'indoor';\n  }\n\n  msg.topic = `\nUPDATE bed_state\nSET mode='${mode}', last_update=datetime('now','localtime')\nWHERE bed IN ('bed1','bed2');\n`;\n  node.warn('MODE UPDATE -> '+mode);\n  return msg;\n} catch(e) {\n  node.warn('MODE UPDATE ERR: '+e);\n  return null;\n}",
+    "x": 460,
+    "y": 220,
+    "wires": [
+      [
+        "sqlite_exec_mode_set"
+      ]
+    ]
+  },
+  {
+    "id": "ui_sw_mode_global_inout",
+    "type": "ui_switch",
+    "z": "e0674b6f1cc308de",
+    "name": "MODE serra (indoor/outdoor)",
+    "label": "Modo Serra",
+    "group": "ui_grp_bed1_cmd",
+    "order": 50,
+    "width": 0,
+    "height": 0,
+    "passthru": false,
+    "decouple": false,
+    "topic": "mode/global",
+    "style": "",
+    "onvalue": "outdoor",
+    "onvalueType": "str",
+    "offvalue": "indoor",
+    "offvalueType": "str",
+    "x": 220,
+    "y": 220,
+    "wires": [
+      [
+        "fn_mode_update_sql"
+      ]
+    ]
+  },
+  {
+    "id": "ui_t_bed1_last_mqtt",
+    "type": "ui_text",
+    "z": "e0674b6f1cc308de",
+    "group": "ui_grp_bed1",
+    "order": 99,
+    "width": 0,
+    "height": 0,
+    "name": "Ultimo MQTT",
+    "label": "Ultimo MQTT",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "x": 120,
+    "y": 180,
+    "wires": []
+  },
+  {
+    "id": "ui_t_bed2_last_mqtt",
+    "type": "ui_text",
+    "z": "e0674b6f1cc308de",
+    "group": "ui_grp_bed2",
+    "order": 99,
+    "width": 0,
+    "height": 0,
+    "name": "Ultimo MQTT",
+    "label": "Ultimo MQTT",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "x": 520,
+    "y": 180,
+    "wires": []
+  },
+  {
+    "id": "fn_mqtt_ts_bed1",
+    "type": "function",
+    "z": "e0674b6f1cc308de",
+    "name": "MQTT TS bed1",
+    "func": "// MQTT TS bed1\ntry {\n  flow.set('bed1_last_mqtt_ts', Date.now());\n} catch(e) {}\nreturn null;\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 260,
+    "y": 220,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "fn_mqtt_ts_bed2",
+    "type": "function",
+    "z": "e0674b6f1cc308de",
+    "name": "MQTT TS bed2",
+    "func": "// MQTT TS bed2\ntry {\n  flow.set('bed2_last_mqtt_ts', Date.now());\n} catch(e) {}\nreturn null;\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 660,
+    "y": 220,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "fn_mqtt_ts_poll_ui",
+    "type": "function",
+    "z": "e0674b6f1cc308de",
+    "name": "MQTT TS poll -> UI",
+    "func": "// MQTT TS poll -> UI\nfunction fmt(ts){\n  if (!ts) return 'n/a';\n  try {\n    const d = new Date(ts);\n    return d.toISOString().replace('T',' ').replace('Z','');\n  } catch(e) { return String(ts); }\n}\n\nconst out1 = {payload: fmt(flow.get('bed1_last_mqtt_ts'))};\nconst out2 = {payload: fmt(flow.get('bed2_last_mqtt_ts'))};\n\nnode.send([out1, out2]);\nreturn null;\n",
+    "outputs": 2,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 460,
+    "y": 300,
+    "wires": [
+      [
+        "ui_t_bed1_last_mqtt"
+      ],
+      [
+        "ui_t_bed2_last_mqtt"
+      ]
+    ]
+  },
+  {
+    "id": "inj_mqtt_ts_poll_5s",
+    "type": "inject",
+    "z": "e0674b6f1cc308de",
+    "name": "poll MQTT TS 5s",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.2,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 260,
+    "y": 300,
+    "wires": [
+      [
+        "fn_mqtt_ts_poll_ui"
+      ]
+    ]
+  },
+  {
+    "id": "fn_mqtt_ts_any",
+    "type": "function",
+    "z": "e0674b6f1cc308de",
+    "name": "MQTT TS ANY",
+    "func": "// MQTT TS ANY: aggiorna \"Ultimo MQTT\" SOLO del bed del messaggio\nfunction pad(n){ return String(n).padStart(2,'0'); }\nfunction fmtLocal(d){\n  return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())+' '+pad(d.getHours())+':'+pad(d.getMinutes())+':'+pad(d.getSeconds());\n}\nfunction bedFrom(msg){\n  const t = String(msg.topic||'').toLowerCase();\n  // caso tipico: serra/telemetry/bed2\n  const parts = t.split('/');\n  for (const p of parts){\n    if (p === 'bed1' || p === 'bed2') return p;\n    // gestisce anche \"bed 1\" (solo se qualcuno lo manda così)\n    if (p.replace(/\\s+/g,'') === 'bed1') return 'bed1';\n    if (p.replace(/\\s+/g,'') === 'bed2') return 'bed2';\n  }\n  // fallback da payload\n  try{\n    const p = msg.payload;\n    if (p && typeof p === 'object'){\n      const z = String(p.zone || p.bed || '').toLowerCase().replace(/\\s+/g,'');\n      if (z === 'bed1' || z === 'bed2') return z;\n    }\n  }catch(e){}\n  return '';\n}\n\ntry{\n  const bed = bedFrom(msg);\n  if (!bed) return [null,null];\n  const now = new Date();\n  const out = { payload: fmtLocal(now), topic: 'last_mqtt/'+bed };\n  if (bed === 'bed1') return [out, null];\n  if (bed === 'bed2') return [null, out];\n  return [null,null];\n}catch(e){\n  node.warn('MQTT TS ANY ERR: '+e);\n  return [null,null];\n}\n",
+    "outputs": 2,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 320,
+    "y": 260,
+    "wires": [
+      [
+        "ui_t_bed1_last_mqtt"
+      ],
+      [
+        "ui_t_bed2_last_mqtt"
+      ]
+    ]
+  },
+  {
+    "id": "fn_ui_autoff_bed2_motor_200ms",
+    "type": "function",
+    "z": "tab_serra_dbmin",
+    "name": "UI AUTO-OFF bed2 motor 200ms",
+    "func": "return null;",
+    "outputs": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 440,
+    "y": 740,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "ui_sw_bed2_motor_dir",
+    "type": "ui_switch",
+    "z": "tab_serra_dbmin",
+    "name": "DIR bed2 (up/down)",
+    "label": "Direzione",
+    "group": "ui_grp_bed2_cmd",
+    "order": 5,
+    "width": 6,
+    "height": 1,
+    "passthru": true,
+    "decouple": "false",
+    "topic": "bed2/motor_dir",
+    "style": "",
+    "onvalue": "up",
+    "onvalueType": "str",
+    "onicon": "",
+    "oncolor": "",
+    "offvalue": "down",
+    "offvalueType": "str",
+    "officon": "",
+    "offcolor": "",
+    "x": 300,
+    "y": 240,
+    "wires": [
+      [
+        "fn_store_bed2_motor_dir"
+      ]
+    ]
+  },
+  {
+    "id": "fn_store_bed2_motor_dir",
+    "type": "function",
+    "z": "tab_serra_dbmin",
+    "name": "STORE bed2 motor_dir (flow)",
+    "func": "// salva dir in flow (up/down) - NO MQTT\ntry {\n  const dir = String(msg.payload || 'down').toLowerCase();\n  flow.set('bed2_motor_dir', (dir==='up' ? 'up' : 'down'));\n  return null;\n} catch(e) {\n  node.warn('STORE motor_dir ERR: '+e);\n  return null;\n}\n",
+    "outputs": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 560,
+    "y": 240,
+    "wires": []
+  },
+  {
+    "id": "mqtt_in_tel_061037b8e0e34e9b",
+    "type": "mqtt in",
+    "z": "tab_serra_cmd2db",
+    "name": "MQTT IN telemetry (last)",
+    "topic": "serra/telemetry/#",
+    "qos": "0",
+    "datatype": "auto",
+    "broker": "mqtt_broker_local",
+    "nl": false,
+    "rap": true,
+    "rh": 0,
+    "inputs": 0,
+    "x": 180,
+    "y": 280,
+    "wires": [
+      [
+        "fn_mqtt_ts_any"
+      ]
+    ]
+  },
+  {
+    "id": "fn_ack2sql_3492eebf5cd642ea",
+    "type": "function",
+    "z": "tab_serra_cmd2db",
+    "name": "ACK → DB (relay status)",
+    "func": "// ACK → SQL: aggiorna telemetry_last SOLO quando arriva ACK su serra/ack/...\nfunction as01(v){\n  if (v === true || v === 1) return 1;\n  if (v === false || v === 0) return 0;\n  const s = String(v ?? '').trim().toLowerCase();\n  if (s === '1' || s === 'true' || s === 'on') return 1;\n  if (s === '0' || s === 'false' || s === 'off') return 0;\n  return null;\n}\nfunction bedFrom(topic, payload){\n  const t = String(topic||'').toLowerCase();\n  const parts = t.split('/');\n  for (const p of parts){\n    if (p === 'bed1' || p === 'bed2') return p;\n    const px = p.replace(/\\s+/g,'');\n    if (px === 'bed1' || px === 'bed2') return px;\n  }\n  try{\n    if (payload && typeof payload === 'object'){\n      const z = String(payload.zone || payload.bed || '').toLowerCase().replace(/\\s+/g,'');\n      if (z === 'bed1' || z === 'bed2') return z;\n    }\n  }catch(e){}\n  return '';\n}\n\ntry{\n  const topic = String(msg.topic||'');\n  const t = topic.toLowerCase();\n  const p = msg.payload;\n\n  const bed = bedFrom(topic, p);\n  if (!bed) return null;\n\n  let led = null;\n  let pump = null;\n\n  // pattern ACK per singolo relay: .../relay/led o .../relay/pump\n  if (t.includes('/relay/led')) {\n    led = (p && typeof p === 'object' && ('on' in p)) ? as01(p.on) : as01(p);\n  }\n  if (t.includes('/relay/pump')) {\n    pump = (p && typeof p === 'object' && ('on' in p)) ? as01(p.on) : as01(p);\n  }\n\n  // pattern ACK “stato completo” nel payload\n  if (p && typeof p === 'object'){\n    if (led is null && ('relay_led' in p)) led = as01(p.relay_led);\n    if (pump is null && ('relay_pump' in p)) pump = as01(p.relay_pump);\n    if (led is null && ('led' in p)) led = as01(p.led);\n    if (pump is null && ('pump' in p)) pump = as01(p.pump);\n  }\n\n  const sets = [];\n  if (led !== null) sets.push('relay_led='+led);\n  if (pump !== null) sets.push('relay_pump='+pump);\n  if (!sets.length) return null;\n\n  msg.topic = 'ack2db';\n  msg.payload = \"UPDATE telemetry_last SET \"+sets.join(', ')+\", ts=datetime('now','localtime') WHERE zone='\"+bed+\"';\";\n  return msg;\n}catch(e){\n  node.warn('ACK→DB ERR: '+e);\n  return null;\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 650,
+    "y": 120,
+    "wires": [
+      [
+        "sqlite_cmd2db_9aae69ecf128",
+        "dbg_cmd2db_ok_de71827a1d87"
+      ]
+    ]
+  }
+]

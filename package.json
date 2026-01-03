@@ -1,0 +1,11 @@
+{
+  "name": "node-red-project",
+  "description": "initially created for you by Node-RED 4.1.0",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "node-red-dashboard": "^3.6.6",
+    "node-red-node-sqlite": "^1.1.1"
+  }
+}
